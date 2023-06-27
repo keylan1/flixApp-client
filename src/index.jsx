@@ -1,4 +1,4 @@
-import { createRoot } from 'react-dom/client';
+import { createRoot } from 'react-dom';
 
 // Import statement to indicate that you need to bundle index.scss
 
@@ -6,7 +6,7 @@ import './index.scss';
 
 // Main component (will eventually use all the others)
 
-const flixApplication = () => {
+const FlixApplication = () => {
   return (
     <div className="my-flix">
       <div>Good morning</div>
@@ -19,4 +19,4 @@ const container = document.querySelector('#root');
 const root = createRoot(container);
 
 // Tells React to rend your app in the root DOM element
-root.render(<flixApplication />);
+root.render(<FlixApplication />);

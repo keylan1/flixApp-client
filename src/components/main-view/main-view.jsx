@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { MovieView } from '../movie-view/movie-view';
 import { MovieCard } from '../movie-card/movie-card';
+import { MovieView } from '../movie-view/movie-view';
 
 export const MainView = () => {
-  const [movies, setMovies] = useState(
+  const [movies, setMovies] = useState([
     {
       id: 1,
       title: 'The Proposal',
@@ -24,8 +24,8 @@ export const MainView = () => {
       image:
         'https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg',
       director: 'Douglas Crockford',
-    }
-  );
+    },
+  ]);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
@@ -37,6 +37,7 @@ export const MainView = () => {
       />
     );
   }
+
   if (movies.length === 0) {
     return <div>No movies!</div>;
   }

@@ -1,4 +1,5 @@
 import { createRoot } from 'react-dom';
+import { MainView } from '../src/components/main-view';
 
 // Import statement to indicate that you need to bundle index.scss
 

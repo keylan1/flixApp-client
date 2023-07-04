@@ -2,7 +2,11 @@ export const MovieView = ({ movie, onBackClick }) => {
   return (
     <div>
       <div>
-        <img src={movie.image} />
+        <img
+          crossOrigin="anonymous"
+          style={{ width: '400px', height: '500px' }}
+          src={movie.image}
+        />
       </div>
       <div>
         <span>Title: </span>

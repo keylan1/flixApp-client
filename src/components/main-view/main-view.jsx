@@ -8,7 +8,7 @@ export const MainView = () => {
       id: 1,
       title: 'The Proposal',
       image:
-        'https://www.imdb.com/title/tt1041829/mediaviewer/rm2227985664/?ref_=tt_ov_i',
+        'https://www.imdb.com/title/tt1041829/mediaviewer/rm2227985664/?ref_=ext_shr_lnk.jpg',
       description:
         'The romance genre focuses on interpersonal relationships, love, and emotional connections between characters, often involving themes of passion, affection, and romantic experiences.',
       genre: 'Romance',
@@ -34,7 +34,7 @@ export const MainView = () => {
       description:
         'Batman faces his ultimate challenge as he battles the Joker, a psychopathic mastermind bent on wreaking havoc on Gotham City.',
       genre: 'Action',
-      director: 'Douglas Crockford',
+      director: 'Christopher Nolan',
       year: 2008,
     },
   ]);

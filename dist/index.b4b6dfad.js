@@ -27316,20 +27316,29 @@ const MainView = ()=>{
         {
             id: 1,
             title: "The Proposal",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51InjRPaF7L._SX377_BO1,204,203,200_.jpg",
-            director: "Marijn Haverbeke"
+            image: "https://www.imdb.com/title/tt1041829/mediaviewer/rm2227985664/?ref_=ext_shr_lnk.jpg",
+            description: "The romance genre focuses on interpersonal relationships, love, and emotional connections between characters, often involving themes of passion, affection, and romantic experiences.",
+            genre: "Romance",
+            director: "Anne Fletcher",
+            year: 2009
         },
         {
             id: 2,
-            title: "Inception",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51WAikRq37L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
-            director: "Federico Kereki"
+            title: "The Lord of the Rings: The Fellowship of the Ring",
+            image: "https://www.imdb.com/title/tt0120737/mediaviewer/rm3592958976/?ref_=tt_ov_i",
+            description: "A hobbit named Frodo embarks on a perilous journey to destroy a powerful ring and save Middle-earth from the dark forces of Sauron.",
+            genre: "Fantasy",
+            director: "Peter Jackson",
+            year: 2001
         },
         {
             id: 3,
             title: "The Dark Knight",
             image: "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg",
-            director: "Douglas Crockford"
+            description: "Batman faces his ultimate challenge as he battles the Joker, a psychopathic mastermind bent on wreaking havoc on Gotham City.",
+            genre: "Action",
+            director: "Christopher Nolan",
+            year: 2008
         }
     ]);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
@@ -27338,14 +27347,14 @@ const MainView = ()=>{
         onBackClick: ()=>setSelectedMovie(null)
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 34,
+        lineNumber: 46,
         columnNumber: 7
     }, undefined);
     if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: "No movies!"
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 42,
+        lineNumber: 54,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27356,16 +27365,16 @@ const MainView = ()=>{
                 }
             }, movie.id, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 48,
+                lineNumber: 60,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 46,
+        lineNumber: 58,
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "3S2AoaaO/PkxdwezCgEvGE1MLBg=");
+_s(MainView, "jEZoPFTTysK/XMv2HUyujNo/NPc=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");

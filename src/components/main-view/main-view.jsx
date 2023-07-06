@@ -5,7 +5,7 @@ import { MovieView } from '../movie-view/movie-view';
 export const MainView = () => {
   const [movies, setMovies] = useState([]);
 
-  const [selectedMovie, setSelectedMovie] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies')

@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
-import PropTypes from 'prop-types';
 
 export const MainView = () => {
   const [movies, setMovies] = useState([]);
 
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState([]);
 
   useEffect(() => {
-    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/')
+    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies')
       .then((response) => response.json())
       .then((data) => {
         const flixApi = data.map((movie) => {
+          console.log(data);
           return {
+            _id: movie._id,
             Title: movie.Title,
             Description: movie.Description,
             Genre: {
@@ -30,8 +31,9 @@ export const MainView = () => {
             Year: movie.Year,
           };
         });
+        setMovies(flixApi);
       });
-  });
+  }, []);
 
   if (selectedMovie) {
     return (
@@ -50,7 +52,7 @@ export const MainView = () => {
     <div>
       {movies.map((movie) => (
         <MovieCard
-          key={movie.id}
+          key={movie._id}
           movie={movie}
           onMovieClick={(newSelectedMovie) => {
             setSelectedMovie(newSelectedMovie);

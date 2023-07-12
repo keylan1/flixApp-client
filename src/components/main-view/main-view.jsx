@@ -4,11 +4,14 @@ import { MovieView } from '../movie-view/movie-view';
 
 export const MainView = () => {
   const [movies, setMovies] = useState([]);
-
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
 
   useEffect(() => {
-    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies')
+    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies', {
+      headers: { Authorizatio: `Bearer: ${token}` },
+    })
       .then((response) => response.json())
       .then((data) => {
         const flixApi = data.map((movie) => {
@@ -33,7 +36,18 @@ export const MainView = () => {
         });
         setMovies(flixApi);
       });
-  }, []);
+  }, [token]);
+
+  if (!user) {
+    return (
+      <LoginView
+        onLoggedIn={(user, token) => {
+          setUser(user);
+          setToken(token);
+        }}
+      />
+    );
+  }
 
   if (selectedMovie) {
     return (

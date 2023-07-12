@@ -9,6 +9,10 @@ export const MainView = () => {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
+    if (!token) {
+      return;
+    }
+
     fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies', {
       headers: { Authorizatio: `Bearer: ${token}` },
     })
@@ -64,15 +68,24 @@ export const MainView = () => {
 
   return (
     <div>
-      {movies.map((movie) => (
-        <MovieCard
-          key={movie._id}
-          movie={movie}
-          onMovieClick={(newSelectedMovie) => {
-            setSelectedMovie(newSelectedMovie);
-          }}
-        />
-      ))}
+      <div>
+        {movies.map((movie) => (
+          <MovieCard
+            key={movie._id}
+            movie={movie}
+            onMovieClick={(newSelectedMovie) => {
+              setSelectedMovie(newSelectedMovie);
+            }}
+          />
+        ))}
+      </div>
+      <button
+        onClick={() => {
+          setUser(null);
+          setToken(null);
+        }}>
+        Logout
+      </button>
     </div>
   );
 };

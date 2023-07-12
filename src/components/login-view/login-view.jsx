@@ -4,20 +4,29 @@ export const LoginView = ({ onLoggedIn }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = {
-      access: username,
-      secret: password,
+      Username: username,
+      Password: password,
     };
 
-    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies', {
+    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/login', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(data),
-    }).then((response) => {
-      if (response.ok) {
-        onLoggedIn(username);
-      } else {
-        alert('Login failed');
-      }
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Login response: ', data);
+        if (data.user) {
+          onLoggedIn(data.user, data.token);
+        } else {
+          alert('No such user');
+        }
+      })
+      .catch((e) => {
+        alert('Something went wrong');
+      });
   };
 
   return (

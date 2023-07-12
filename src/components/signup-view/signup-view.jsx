@@ -16,20 +16,24 @@ export const SignupView = () => {
       Birthday: birthday,
     };
 
-    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies', {
+    fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/users', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
-      if (response.ok) {
-        alert('Signup successful');
-        window.location.reload();
-      } else {
-        alert('Signup failed');
-      }
-    });
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert('Signup successful');
+          window.location.reload();
+        } else {
+          alert('Signup failed');
+        }
+      })
+      .catch((e) => {
+        alert('Mistake made somewhere');
+      });
   };
 
   return (

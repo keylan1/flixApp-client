@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
+import { LoginView } from '../login-view/login-view';
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -16,7 +17,7 @@ export const MainView = () => {
     }
 
     fetch('https://flixapptime-44f9e1282e9e.herokuapp.com/movies', {
-      headers: { Authorizatio: `Bearer: ${token}` },
+      headers: { Authorization: `Bearer: ${token}` },
     })
       .then((response) => response.json())
       .then((data) => {

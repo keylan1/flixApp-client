@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
 export const LoginView = ({ onLoggedIn }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = {
@@ -34,6 +37,7 @@ export const LoginView = ({ onLoggedIn }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
+        Username:
         <input
           type="text"
           value={username}
@@ -43,6 +47,7 @@ export const LoginView = ({ onLoggedIn }) => {
         />
       </label>
       <label>
+        Password:
         <input
           type="password"
           value={password}
@@ -51,6 +56,7 @@ export const LoginView = ({ onLoggedIn }) => {
           minLength="10"
         />
       </label>
+      <button type="submit">Submit</button>
     </form>
   );
 };

@@ -1,3 +1,6 @@
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 export const MovieView = ({ movie, onBackClick }) => {
   return (
     <div>

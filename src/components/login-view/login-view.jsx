@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap';
-import Form from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState('');
@@ -51,14 +51,16 @@ export const LoginView = ({ onLoggedIn }) => {
       <Form.Group controlId="formPassword">
         <Form.Label>Password: </Form.Label>
         <Form.Control
-          type="text"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
           minLength="8"
         />
       </Form.Group>
-      <button type="submit">Submit</button>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
     </Form>
   );
 };

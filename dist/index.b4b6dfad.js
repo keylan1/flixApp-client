@@ -2947,7 +2947,6 @@ var _client = require("react-dom/client");
 var _mainView = require("./components/main-view/main-view");
 var _container = require("react-bootstrap/Container");
 var _containerDefault = parcelHelpers.interopDefault(_container);
-var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 // Import statement to indicate that you need to bundle index.scss
 var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
@@ -2982,7 +2981,7 @@ $RefreshReg$(_c, "FlixApplication");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","bootstrap/dist/css/bootstrap.min.css":"i5LP7","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27327,6 +27326,7 @@ var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
+var _indexScss = require("../../index.scss");
 var _s = $RefreshSig$();
 const MainView = ()=>{
     _s();
@@ -27371,6 +27371,7 @@ const MainView = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
         className: "justify-content-md-center",
         children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+            className: "p-5",
             md: 5,
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginView.LoginView), {
@@ -27380,19 +27381,34 @@ const MainView = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 56,
+                    lineNumber: 58,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/main-view/main-view.jsx",
+                    lineNumber: 64,
                     columnNumber: 11
                 }, undefined),
                 "or",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/main-view/main-view.jsx",
+                    lineNumber: 66,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/main-view/main-view.jsx",
+                    lineNumber: 67,
+                    columnNumber: 11
+                }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signupView.SignupView), {}, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 63,
+                    lineNumber: 68,
                     columnNumber: 11
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 55,
+            lineNumber: 57,
             columnNumber: 9
         }, undefined) : selectedMovie ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
             md: 8,
@@ -27401,22 +27417,27 @@ const MainView = ()=>{
                 onBackClick: ()=>setSelectedMovie(null)
             }, void 0, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 67,
+                lineNumber: 72,
                 columnNumber: 11
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 66,
+            lineNumber: 71,
             columnNumber: 9
         }, undefined) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: "No movies!"
         }, void 0, false, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 73,
+            lineNumber: 78,
             columnNumber: 9
         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                    className: "m-3",
+                    style: {
+                        color: "white",
+                        fontWeight: "bold"
+                    },
                     variant: "primary",
                     onClick: ()=>{
                         setUser(null);
@@ -27425,10 +27446,11 @@ const MainView = ()=>{
                     children: "Logout"
                 }, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 76,
+                    lineNumber: 81,
                     columnNumber: 11
                 }, undefined),
                 movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                        className: "mb-5",
                         md: 3,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                             style: {
@@ -27440,19 +27462,19 @@ const MainView = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 86,
+                            lineNumber: 93,
                             columnNumber: 15
                         }, undefined)
                     }, movie._id, false, {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 85,
+                        lineNumber: 92,
                         columnNumber: 13
                     }, undefined))
             ]
         }, void 0, true)
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 53,
+        lineNumber: 55,
         columnNumber: 5
     }, undefined);
 };
@@ -27466,7 +27488,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","../movie-view/movie-view":"ggaUx","../movie-card/movie-card":"bwuIu","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","react-bootstrap/Row":"cMC39","react-bootstrap/Button":"aPzUt","react-bootstrap/Col":"2L2I6"}],"wjdJL":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","../movie-view/movie-view":"ggaUx","../movie-card/movie-card":"bwuIu","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","react-bootstrap/Row":"cMC39","react-bootstrap/Button":"aPzUt","react-bootstrap/Col":"2L2I6","../../index.scss":"lJZlQ"}],"wjdJL":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27509,217 +27531,265 @@ parcelHelpers.export(exports, "MovieView", ()=>MovieView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _form = require("react-bootstrap/Form");
-var _formDefault = parcelHelpers.interopDefault(_form);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _row = require("react-bootstrap/Row");
+var _rowDefault = parcelHelpers.interopDefault(_row);
+var _col = require("react-bootstrap/Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _indexScss = require("../../index.scss");
 const MovieView = ({ movie, onBackClick })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+        className: "justify-content-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "d-flex justify-content-center align-items-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
                     crossOrigin: "anonymous",
-                    style: {
-                        width: "400px",
-                        height: "500px"
-                    },
+                    className: "h-50, w-50",
+                    variant: "top",
+                    //style={{ width: '400px', height: '500px' }}
                     src: movie.ImagePath
                 }, void 0, false, {
                     fileName: "src/components/movie-view/movie-view.jsx",
-                    lineNumber: 8,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 7,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
+                style: {
+                    fontWeight: "bold"
+                },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: "Title: "
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 15,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: movie.Title
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 16,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 14,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Description: "
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: movie.Description
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Genre: "
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, undefined),
-                    movie.Genre && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: movie.Genre.name
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "Description: "
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 26,
-                                columnNumber: 13
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: movie.Genre.description
+                                children: movie.Description
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 27,
-                                columnNumber: 13
+                                columnNumber: 11
                             }, undefined)
                         ]
-                    }, void 0, true)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 22,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Director: "
-                    }, void 0, false, {
+                    }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 32,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined),
-                    movie.Director && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: movie.Director.name
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "Genre: "
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 35,
-                                columnNumber: 13
+                                lineNumber: 30,
+                                columnNumber: 11
+                            }, undefined),
+                            movie.Genre && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        style: {
+                                            fontWeight: "bold"
+                                        },
+                                        children: movie.Genre.name
+                                    }, void 0, false, {
+                                        fileName: "src/components/movie-view/movie-view.jsx",
+                                        lineNumber: 33,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: movie.Genre.description
+                                    }, void 0, false, {
+                                        fileName: "src/components/movie-view/movie-view.jsx",
+                                        lineNumber: 34,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "Director: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 39,
+                                columnNumber: 11
+                            }, undefined),
+                            movie.Director && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: movie.Director.name
+                                    }, void 0, false, {
+                                        fileName: "src/components/movie-view/movie-view.jsx",
+                                        lineNumber: 42,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: movie.Director.bio
+                                    }, void 0, false, {
+                                        fileName: "src/components/movie-view/movie-view.jsx",
+                                        lineNumber: 43,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "Year: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 48,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: movie.Director.bio
+                                children: movie.Year
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 36,
-                                columnNumber: 13
+                                lineNumber: 49,
+                                columnNumber: 11
                             }, undefined)
                         ]
-                    }, void 0, true)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Year: "
-                    }, void 0, false, {
+                    }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 41,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: movie.Year
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "Actors: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 52,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: movie.Actors
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 53,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 42,
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "Featured: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 56,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: movie.Featured
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 57,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 40,
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Actors: "
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 45,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: movie.Actors
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 44,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Featured: "
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 49,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: movie.Featured
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 50,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 48,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                className: "p-2.75",
+                style: {
+                    color: "white",
+                    fontWeight: "bold"
+                },
                 onClick: onBackClick,
                 children: "Back"
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 52,
+                lineNumber: 60,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/movie-view/movie-view.jsx",
-        lineNumber: 6,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
@@ -27732,7 +27802,7 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"aPzUt":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","react-bootstrap/Button":"aPzUt","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../../index.scss":"lJZlQ","react-bootstrap/Card":"lAynp"}],"aPzUt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -28821,72 +28891,372 @@ function createBootstrapComponent(Component, opts) {
 }
 exports.default = ThemeProvider;
 
-},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"iBZ80":[function(require,module,exports) {
+},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"cMC39":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
 var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _react = require("react");
-var _formCheck = require("./FormCheck");
-var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
-var _formControl = require("./FormControl");
-var _formControlDefault = parcelHelpers.interopDefault(_formControl);
-var _formFloating = require("./FormFloating");
-var _formFloatingDefault = parcelHelpers.interopDefault(_formFloating);
-var _formGroup = require("./FormGroup");
-var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
-var _formLabel = require("./FormLabel");
-var _formLabelDefault = parcelHelpers.interopDefault(_formLabel);
-var _formRange = require("./FormRange");
-var _formRangeDefault = parcelHelpers.interopDefault(_formRange);
-var _formSelect = require("./FormSelect");
-var _formSelectDefault = parcelHelpers.interopDefault(_formSelect);
-var _formText = require("./FormText");
-var _formTextDefault = parcelHelpers.interopDefault(_formText);
-var _switch = require("./Switch");
-var _switchDefault = parcelHelpers.interopDefault(_switch);
-var _floatingLabel = require("./FloatingLabel");
-var _floatingLabelDefault = parcelHelpers.interopDefault(_floatingLabel);
+var _themeProvider = require("./ThemeProvider");
 var _jsxRuntime = require("react/jsx-runtime");
-const propTypes = {
-    /**
-   * The Form `ref` will be forwarded to the underlying element,
-   * which means, unless it's rendered `as` a composite component,
-   * it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */ _ref: (0, _propTypesDefault.default).any,
-    /**
-   * Mark a form as having been validated. Setting it to `true` will
-   * toggle any validation styles on the forms elements.
-   */ validated: (0, _propTypesDefault.default).bool,
-    as: (0, _propTypesDefault.default).elementType
-};
-const Form = /*#__PURE__*/ _react.forwardRef(({ className, validated, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "form", ...props }, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ...props,
+const Row = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "div", ...props }, ref)=>{
+    const decoratedBsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "row");
+    const breakpoints = (0, _themeProvider.useBootstrapBreakpoints)();
+    const minBreakpoint = (0, _themeProvider.useBootstrapMinBreakpoint)();
+    const sizePrefix = `${decoratedBsPrefix}-cols`;
+    const classes = [];
+    breakpoints.forEach((brkPoint)=>{
+        const propValue = props[brkPoint];
+        delete props[brkPoint];
+        let cols;
+        if (propValue != null && typeof propValue === "object") ({ cols } = propValue);
+        else cols = propValue;
+        const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
+        if (cols != null) classes.push(`${sizePrefix}${infix}-${cols}`);
+    });
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
         ref: ref,
-        className: (0, _classnamesDefault.default)(className, validated && "was-validated")
-    }));
-Form.displayName = "Form";
-Form.propTypes = propTypes;
-exports.default = Object.assign(Form, {
-    Group: (0, _formGroupDefault.default),
-    Control: (0, _formControlDefault.default),
-    Floating: (0, _formFloatingDefault.default),
-    Check: (0, _formCheckDefault.default),
-    Switch: (0, _switchDefault.default),
-    Label: (0, _formLabelDefault.default),
-    Text: (0, _formTextDefault.default),
-    Range: (0, _formRangeDefault.default),
-    Select: (0, _formSelectDefault.default),
-    FloatingLabel: (0, _floatingLabelDefault.default)
+        ...props,
+        className: (0, _classnamesDefault.default)(className, decoratedBsPrefix, ...classes)
+    });
+});
+Row.displayName = "Row";
+exports.default = Row;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"2L2I6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useCol", ()=>useCol);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+function useCol({ as, bsPrefix, className, ...props }) {
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "col");
+    const breakpoints = (0, _themeProvider.useBootstrapBreakpoints)();
+    const minBreakpoint = (0, _themeProvider.useBootstrapMinBreakpoint)();
+    const spans = [];
+    const classes = [];
+    breakpoints.forEach((brkPoint)=>{
+        const propValue = props[brkPoint];
+        delete props[brkPoint];
+        let span;
+        let offset;
+        let order;
+        if (typeof propValue === "object" && propValue != null) ({ span, offset, order } = propValue);
+        else span = propValue;
+        const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
+        if (span) spans.push(span === true ? `${bsPrefix}${infix}` : `${bsPrefix}${infix}-${span}`);
+        if (order != null) classes.push(`order${infix}-${order}`);
+        if (offset != null) classes.push(`offset${infix}-${offset}`);
+    });
+    return [
+        {
+            ...props,
+            className: (0, _classnamesDefault.default)(className, ...spans, ...classes)
+        },
+        {
+            as,
+            bsPrefix,
+            spans
+        }
+    ];
+}
+const Col = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+(props, ref)=>{
+    const [{ className, ...colProps }, { as: Component = "div", bsPrefix, spans }] = useCol(props);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...colProps,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, !spans.length && bsPrefix)
+    });
+});
+Col.displayName = "Col";
+exports.default = Col;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"lJZlQ":[function() {},{}],"lAynp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _createWithBsPrefix = require("./createWithBsPrefix");
+var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
+var _divWithClassName = require("./divWithClassName");
+var _divWithClassNameDefault = parcelHelpers.interopDefault(_divWithClassName);
+var _cardImg = require("./CardImg");
+var _cardImgDefault = parcelHelpers.interopDefault(_cardImg);
+var _cardHeader = require("./CardHeader");
+var _cardHeaderDefault = parcelHelpers.interopDefault(_cardHeader);
+var _jsxRuntime = require("react/jsx-runtime");
+const DivStyledAsH5 = (0, _divWithClassNameDefault.default)("h5");
+const DivStyledAsH6 = (0, _divWithClassNameDefault.default)("h6");
+const CardBody = (0, _createWithBsPrefixDefault.default)("card-body");
+const CardTitle = (0, _createWithBsPrefixDefault.default)("card-title", {
+    Component: DivStyledAsH5
+});
+const CardSubtitle = (0, _createWithBsPrefixDefault.default)("card-subtitle", {
+    Component: DivStyledAsH6
+});
+const CardLink = (0, _createWithBsPrefixDefault.default)("card-link", {
+    Component: "a"
+});
+const CardText = (0, _createWithBsPrefixDefault.default)("card-text", {
+    Component: "p"
+});
+const CardFooter = (0, _createWithBsPrefixDefault.default)("card-footer");
+const CardImgOverlay = (0, _createWithBsPrefixDefault.default)("card-img-overlay");
+const Card = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, bg, text, border, body = false, children, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "div", ...props }, ref)=>{
+    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "card");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ref: ref,
+        ...props,
+        className: (0, _classnamesDefault.default)(className, prefix, bg && `bg-${bg}`, text && `text-${text}`, border && `border-${border}`),
+        children: body ? /*#__PURE__*/ (0, _jsxRuntime.jsx)(CardBody, {
+            children: children
+        }) : children
+    });
+});
+Card.displayName = "Card";
+exports.default = Object.assign(Card, {
+    Img: (0, _cardImgDefault.default),
+    Title: CardTitle,
+    Subtitle: CardSubtitle,
+    Body: CardBody,
+    Link: CardLink,
+    Text: CardText,
+    Header: (0, _cardHeaderDefault.default),
+    Footer: CardFooter,
+    ImgOverlay: CardImgOverlay
 });
 
-},{"classnames":"jocGM","prop-types":"7wKI2","react":"21dqq","./FormCheck":"idkr0","./FormControl":"iynMc","./FormFloating":"aj346","./FormGroup":"1qBHH","./FormLabel":"66epi","./FormRange":"8zsCO","./FormSelect":"hHWyB","./FormText":"ffeC7","./Switch":"9O81i","./FloatingLabel":"coYzo","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"7wKI2":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./createWithBsPrefix":"itt7e","./divWithClassName":"eDg7t","./CardImg":"1reTi","./CardHeader":"dXnnx","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"itt7e":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>createWithBsPrefix);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _camelize = require("dom-helpers/camelize");
+var _camelizeDefault = parcelHelpers.interopDefault(_camelize);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const pascalCase = (str)=>str[0].toUpperCase() + (0, _camelizeDefault.default)(str).slice(1);
+function createWithBsPrefix(prefix, { displayName = pascalCase(prefix), Component, defaultProps } = {}) {
+    const BsComponent = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Tag = Component || "div", ...props }, ref)=>{
+        const componentProps = {
+            ...defaultProps,
+            ...props
+        };
+        const resolvedPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, prefix);
+        return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Tag, {
+            ref: ref,
+            className: (0, _classnamesDefault.default)(className, resolvedPrefix),
+            ...componentProps
+        });
+    });
+    BsComponent.displayName = displayName;
+    return BsComponent;
+}
+
+},{"classnames":"jocGM","dom-helpers/camelize":"kbWDq","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"kbWDq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>camelize);
+var rHyphen = /-(.)/g;
+function camelize(string) {
+    return string.replace(rHyphen, function(_, chr) {
+        return chr.toUpperCase();
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"eDg7t":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _jsxRuntime = require("react/jsx-runtime");
+exports.default = (className)=>/*#__PURE__*/ _react.forwardRef((p, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+            ...p,
+            ref: ref,
+            className: (0, _classnamesDefault.default)(p.className, className)
+        }));
+
+},{"react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"1reTi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const CardImg = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+({ bsPrefix, className, variant, as: Component = "img", ...props }, ref)=>{
+    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "card-img");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ref: ref,
+        className: (0, _classnamesDefault.default)(variant ? `${prefix}-${variant}` : prefix, className),
+        ...props
+    });
+});
+CardImg.displayName = "CardImg";
+exports.default = CardImg;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"dXnnx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _cardHeaderContext = require("./CardHeaderContext");
+var _cardHeaderContextDefault = parcelHelpers.interopDefault(_cardHeaderContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const CardHeader = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "div", ...props }, ref)=>{
+    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "card-header");
+    const contextValue = (0, _react.useMemo)(()=>({
+            cardHeaderBsPrefix: prefix
+        }), [
+        prefix
+    ]);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _cardHeaderContextDefault.default).Provider, {
+        value: contextValue,
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+            ref: ref,
+            ...props,
+            className: (0, _classnamesDefault.default)(className, prefix)
+        })
+    });
+});
+CardHeader.displayName = "CardHeader";
+exports.default = CardHeader;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./CardHeaderContext":"36cNB","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"36cNB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const context = /*#__PURE__*/ _react.createContext(null);
+context.displayName = "CardHeaderContext";
+exports.default = context;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"bwuIu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$67b2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactBootstrap = require("react-bootstrap");
+var _movieCardScss = require("./movie-card.scss");
+const MovieCard = ({ movie, onMovieClick })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
+        className: "h-100",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
+                className: "w-100, h-100",
+                variant: "top",
+                src: movie.ImagePath
+            }, void 0, false, {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Title, {
+                        children: movie.Title
+                    }, void 0, false, {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
+                        className: "justify-content",
+                        children: movie.Description
+                    }, void 0, false, {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                        className: "h-100, w-100",
+                        style: {
+                            color: "white",
+                            fontWeight: "bold"
+                        },
+                        variant: "primary",
+                        onClick: ()=>{
+                            onMovieClick(movie);
+                        },
+                        children: movie.Title
+                    }, void 0, false, {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/movie-card/movie-card.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = MovieCard;
+MovieCard.propTypes = {
+    movie: (0, _propTypesDefault.default).shape({
+        Title: (0, _propTypesDefault.default).string.isRequired,
+        Description: (0, _propTypesDefault.default).string.isRequired,
+        Genre: (0, _propTypesDefault.default).shape({
+            Name: (0, _propTypesDefault.default).string.isRequired,
+            Description: (0, _propTypesDefault.default).string.isRequired
+        }),
+        Director: (0, _propTypesDefault.default).shape({
+            Name: (0, _propTypesDefault.default).string.isRequired,
+            Bio: (0, _propTypesDefault.default).string.isRequired
+        }),
+        Actors: (0, _propTypesDefault.default).string.isRequired,
+        ImagePath: (0, _propTypesDefault.default).string.isRequired,
+        Year: (0, _propTypesDefault.default).string.isRequired
+    }).isRequired,
+    onBackClick: (0, _propTypesDefault.default).func.isRequired
+};
+var _c;
+$RefreshReg$(_c, "MovieCard");
+
+  $parcel$ReactRefreshHelpers$67b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","prop-types":"7wKI2","react-bootstrap":"3AD9A","./movie-card.scss":"d6HH4"}],"7wKI2":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -29633,650 +30003,7 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"idkr0":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _feedback = require("./Feedback");
-var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
-var _formCheckInput = require("./FormCheckInput");
-var _formCheckInputDefault = parcelHelpers.interopDefault(_formCheckInput);
-var _formCheckLabel = require("./FormCheckLabel");
-var _formCheckLabelDefault = parcelHelpers.interopDefault(_formCheckLabel);
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _elementChildren = require("./ElementChildren");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormCheck = /*#__PURE__*/ _react.forwardRef(({ id, bsPrefix, bsSwitchPrefix, inline = false, reverse = false, disabled = false, isValid = false, isInvalid = false, feedbackTooltip = false, feedback, feedbackType, className, style, title = "", type = "checkbox", label, children, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as = "input", ...props }, ref)=>{
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-check");
-    bsSwitchPrefix = (0, _themeProvider.useBootstrapPrefix)(bsSwitchPrefix, "form-switch");
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    const innerFormContext = (0, _react.useMemo)(()=>({
-            controlId: id || controlId
-        }), [
-        controlId,
-        id
-    ]);
-    const hasLabel = !children && label != null && label !== false || (0, _elementChildren.hasChildOfType)(children, (0, _formCheckLabelDefault.default));
-    const input = /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formCheckInputDefault.default), {
-        ...props,
-        type: type === "switch" ? "checkbox" : type,
-        ref: ref,
-        isValid: isValid,
-        isInvalid: isInvalid,
-        disabled: disabled,
-        as: as
-    });
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formContextDefault.default).Provider, {
-        value: innerFormContext,
-        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-            style: style,
-            className: (0, _classnamesDefault.default)(className, hasLabel && bsPrefix, inline && `${bsPrefix}-inline`, reverse && `${bsPrefix}-reverse`, type === "switch" && bsSwitchPrefix),
-            children: children || /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _jsxRuntime.Fragment), {
-                children: [
-                    input,
-                    hasLabel && /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formCheckLabelDefault.default), {
-                        title: title,
-                        children: label
-                    }),
-                    feedback && /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _feedbackDefault.default), {
-                        type: feedbackType,
-                        tooltip: feedbackTooltip,
-                        children: feedback
-                    })
-                ]
-            })
-        })
-    });
-});
-FormCheck.displayName = "FormCheck";
-exports.default = Object.assign(FormCheck, {
-    Input: (0, _formCheckInputDefault.default),
-    Label: (0, _formCheckLabelDefault.default)
-});
-
-},{"classnames":"jocGM","react":"21dqq","./Feedback":"aWeg2","./FormCheckInput":"dPzD9","./FormCheckLabel":"fGhS2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","./ElementChildren":"fdyAp","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"aWeg2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _jsxRuntime = require("react/jsx-runtime");
-const propTypes = {
-    /**
-   * Specify whether the feedback is for valid or invalid fields
-   *
-   * @type {('valid'|'invalid')}
-   */ type: (0, _propTypesDefault.default).string,
-    /** Display feedback as a tooltip. */ tooltip: (0, _propTypesDefault.default).bool,
-    as: (0, _propTypesDefault.default).elementType
-};
-const Feedback = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-({ as: Component = "div", className, type = "valid", tooltip = false, ...props }, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ...props,
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, `${type}-${tooltip ? "tooltip" : "feedback"}`)
-    }));
-Feedback.displayName = "Feedback";
-Feedback.propTypes = propTypes;
-exports.default = Feedback;
-
-},{"classnames":"jocGM","react":"21dqq","prop-types":"7wKI2","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"dPzD9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormCheckInput = /*#__PURE__*/ _react.forwardRef(({ id, bsPrefix, className, type = "checkbox", isValid = false, isInvalid = false, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "input", ...props }, ref)=>{
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-check-input");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ...props,
-        ref: ref,
-        type: type,
-        id: id || controlId,
-        className: (0, _classnamesDefault.default)(className, bsPrefix, isValid && "is-valid", isInvalid && "is-invalid")
-    });
-});
-FormCheckInput.displayName = "FormCheckInput";
-exports.default = FormCheckInput;
-
-},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"gjvSt":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-// TODO
-const FormContext = /*#__PURE__*/ _react.createContext({});
-exports.default = FormContext;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"fGhS2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormCheckLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, htmlFor, ...props }, ref)=>{
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-check-label");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
-        ...props,
-        ref: ref,
-        htmlFor: htmlFor || controlId,
-        className: (0, _classnamesDefault.default)(className, bsPrefix)
-    });
-});
-FormCheckLabel.displayName = "FormCheckLabel";
-exports.default = FormCheckLabel;
-
-},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"fdyAp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "map", ()=>map);
-parcelHelpers.export(exports, "forEach", ()=>forEach);
-parcelHelpers.export(exports, "hasChildOfType", ()=>hasChildOfType);
-var _react = require("react");
-/**
- * Iterates through children that are typically specified as `props.children`,
- * but only maps over children that are "valid elements".
- *
- * The mapFunction provided index will be normalised to the components mapped,
- * so an invalid component would not increase the index.
- *
- */ function map(children, func) {
-    let index = 0;
-    return _react.Children.map(children, (child)=>/*#__PURE__*/ _react.isValidElement(child) ? func(child, index++) : child);
-}
-/**
- * Iterates through children that are "valid elements".
- *
- * The provided forEachFunc(child, index) will be called for each
- * leaf child with the index reflecting the position relative to "valid components".
- */ function forEach(children, func) {
-    let index = 0;
-    _react.Children.forEach(children, (child)=>{
-        if (/*#__PURE__*/ _react.isValidElement(child)) func(child, index++);
-    });
-}
-/**
- * Finds whether a component's `children` prop includes a React element of the
- * specified type.
- */ function hasChildOfType(children, type) {
-    return _react.Children.toArray(children).some((child)=>/*#__PURE__*/ _react.isValidElement(child) && child.type === type);
-}
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"iynMc":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _warning = require("warning");
-var _warningDefault = parcelHelpers.interopDefault(_warning);
-var _feedback = require("./Feedback");
-var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormControl = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, type, size, htmlSize, id, className, isValid = false, isInvalid = false, plaintext, readOnly, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "input", ...props }, ref)=>{
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-control");
-    let classes;
-    if (plaintext) classes = {
-        [`${bsPrefix}-plaintext`]: true
-    };
-    else classes = {
-        [bsPrefix]: true,
-        [`${bsPrefix}-${size}`]: size
-    };
-    (0, _warningDefault.default)(controlId == null || !id, "`controlId` is ignored on `<FormControl>` when `id` is specified.");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ...props,
-        type: type,
-        size: htmlSize,
-        ref: ref,
-        readOnly: readOnly,
-        id: id || controlId,
-        className: (0, _classnamesDefault.default)(className, classes, isValid && `is-valid`, isInvalid && `is-invalid`, type === "color" && `${bsPrefix}-color`)
-    });
-});
-FormControl.displayName = "FormControl";
-exports.default = Object.assign(FormControl, {
-    Feedback: (0, _feedbackDefault.default)
-});
-
-},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Feedback":"aWeg2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"eUVzU":[function(require,module,exports) {
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */ var __DEV__ = true;
-var warning = function() {};
-if (__DEV__) {
-    var printWarning = function printWarning(format, args) {
-        var len = arguments.length;
-        args = new Array(len > 1 ? len - 1 : 0);
-        for(var key = 1; key < len; key++)args[key - 1] = arguments[key];
-        var argIndex = 0;
-        var message = "Warning: " + format.replace(/%s/g, function() {
-            return args[argIndex++];
-        });
-        if (typeof console !== "undefined") console.error(message);
-        try {
-            // --- Welcome to debugging React ---
-            // This error was thrown as a convenience so that you can use this stack
-            // to find the callsite that caused this warning to fire.
-            throw new Error(message);
-        } catch (x) {}
-    };
-    warning = function(condition, format, args) {
-        var len = arguments.length;
-        args = new Array(len > 2 ? len - 2 : 0);
-        for(var key = 2; key < len; key++)args[key - 2] = arguments[key];
-        if (format === undefined) throw new Error("`warning(condition, format, ...args)` requires a warning message argument");
-        if (!condition) printWarning.apply(null, [
-            format
-        ].concat(args));
-    };
-}
-module.exports = warning;
-
-},{}],"aj346":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _createWithBsPrefix = require("./createWithBsPrefix");
-var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
-exports.default = (0, _createWithBsPrefixDefault.default)("form-floating");
-
-},{"./createWithBsPrefix":"itt7e","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"itt7e":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>createWithBsPrefix);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _camelize = require("dom-helpers/camelize");
-var _camelizeDefault = parcelHelpers.interopDefault(_camelize);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const pascalCase = (str)=>str[0].toUpperCase() + (0, _camelizeDefault.default)(str).slice(1);
-function createWithBsPrefix(prefix, { displayName = pascalCase(prefix), Component, defaultProps } = {}) {
-    const BsComponent = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Tag = Component || "div", ...props }, ref)=>{
-        const componentProps = {
-            ...defaultProps,
-            ...props
-        };
-        const resolvedPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, prefix);
-        return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Tag, {
-            ref: ref,
-            className: (0, _classnamesDefault.default)(className, resolvedPrefix),
-            ...componentProps
-        });
-    });
-    BsComponent.displayName = displayName;
-    return BsComponent;
-}
-
-},{"classnames":"jocGM","dom-helpers/camelize":"kbWDq","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"kbWDq":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>camelize);
-var rHyphen = /-(.)/g;
-function camelize(string) {
-    return string.replace(rHyphen, function(_, chr) {
-        return chr.toUpperCase();
-    });
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"1qBHH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const FormGroup = /*#__PURE__*/ _react.forwardRef(({ controlId, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "div", ...props }, ref)=>{
-    const context = (0, _react.useMemo)(()=>({
-            controlId
-        }), [
-        controlId
-    ]);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formContextDefault.default).Provider, {
-        value: context,
-        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-            ...props,
-            ref: ref
-        })
-    });
-});
-FormGroup.displayName = "FormGroup";
-exports.default = FormGroup;
-
-},{"react":"21dqq","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"66epi":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _warning = require("warning");
-var _warningDefault = parcelHelpers.interopDefault(_warning);
-var _col = require("./Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormLabel = /*#__PURE__*/ _react.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "label", bsPrefix, column = false, visuallyHidden = false, className, htmlFor, ...props }, ref)=>{
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-label");
-    let columnClass = "col-form-label";
-    if (typeof column === "string") columnClass = `${columnClass} ${columnClass}-${column}`;
-    const classes = (0, _classnamesDefault.default)(className, bsPrefix, visuallyHidden && "visually-hidden", column && columnClass);
-    (0, _warningDefault.default)(controlId == null || !htmlFor, "`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.");
-    htmlFor = htmlFor || controlId;
-    if (column) return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _colDefault.default), {
-        ref: ref,
-        as: "label",
-        className: classes,
-        htmlFor: htmlFor,
-        ...props
-    });
-    return(/*#__PURE__*/ // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
-    (0, _jsxRuntime.jsx)(Component, {
-        ref: ref,
-        className: classes,
-        htmlFor: htmlFor,
-        ...props
-    }));
-});
-FormLabel.displayName = "FormLabel";
-exports.default = FormLabel;
-
-},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Col":"2L2I6","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"2L2I6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useCol", ()=>useCol);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-function useCol({ as, bsPrefix, className, ...props }) {
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "col");
-    const breakpoints = (0, _themeProvider.useBootstrapBreakpoints)();
-    const minBreakpoint = (0, _themeProvider.useBootstrapMinBreakpoint)();
-    const spans = [];
-    const classes = [];
-    breakpoints.forEach((brkPoint)=>{
-        const propValue = props[brkPoint];
-        delete props[brkPoint];
-        let span;
-        let offset;
-        let order;
-        if (typeof propValue === "object" && propValue != null) ({ span, offset, order } = propValue);
-        else span = propValue;
-        const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
-        if (span) spans.push(span === true ? `${bsPrefix}${infix}` : `${bsPrefix}${infix}-${span}`);
-        if (order != null) classes.push(`order${infix}-${order}`);
-        if (offset != null) classes.push(`offset${infix}-${offset}`);
-    });
-    return [
-        {
-            ...props,
-            className: (0, _classnamesDefault.default)(className, ...spans, ...classes)
-        },
-        {
-            as,
-            bsPrefix,
-            spans
-        }
-    ];
-}
-const Col = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-(props, ref)=>{
-    const [{ className, ...colProps }, { as: Component = "div", bsPrefix, spans }] = useCol(props);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ...colProps,
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, !spans.length && bsPrefix)
-    });
-});
-Col.displayName = "Col";
-exports.default = Col;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"8zsCO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const FormRange = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, id, ...props }, ref)=>{
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-range");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
-        ...props,
-        type: "range",
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, bsPrefix),
-        id: id || controlId
-    });
-});
-FormRange.displayName = "FormRange";
-exports.default = FormRange;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"hHWyB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const FormSelect = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, size, htmlSize, className, isValid = false, isInvalid = false, id, ...props }, ref)=>{
-    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-select");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("select", {
-        ...props,
-        size: htmlSize,
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, bsPrefix, size && `${bsPrefix}-${size}`, isValid && `is-valid`, isInvalid && `is-invalid`),
-        id: id || controlId
-    });
-});
-FormSelect.displayName = "FormSelect";
-exports.default = FormSelect;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"ffeC7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormText = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-({ bsPrefix, className, as: Component = "small", muted, ...props }, ref)=>{
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-text");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ...props,
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, bsPrefix, muted && "text-muted")
-    });
-});
-FormText.displayName = "FormText";
-exports.default = FormText;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"9O81i":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _formCheck = require("./FormCheck");
-var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
-var _jsxRuntime = require("react/jsx-runtime");
-const Switch = /*#__PURE__*/ _react.forwardRef((props, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formCheckDefault.default), {
-        ...props,
-        ref: ref,
-        type: "switch"
-    }));
-Switch.displayName = "Switch";
-exports.default = Object.assign(Switch, {
-    Input: (0, _formCheckDefault.default).Input,
-    Label: (0, _formCheckDefault.default).Label
-});
-
-},{"react":"21dqq","./FormCheck":"idkr0","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"coYzo":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _formGroup = require("./FormGroup");
-var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FloatingLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, children, controlId, label, ...props }, ref)=>{
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-floating");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _formGroupDefault.default), {
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, bsPrefix),
-        controlId: controlId,
-        ...props,
-        children: [
-            children,
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
-                htmlFor: controlId,
-                children: label
-            })
-        ]
-    });
-});
-FloatingLabel.displayName = "FloatingLabel";
-exports.default = FloatingLabel;
-
-},{"classnames":"jocGM","react":"21dqq","./FormGroup":"1qBHH","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"bwuIu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$67b2.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MovieCard", ()=>MovieCard);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactBootstrap = require("react-bootstrap");
-const MovieCard = ({ movie, onMovieClick })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
-                variant: "top",
-                src: movie.ImagePath
-            }, void 0, false, {
-                fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Title, {
-                        children: movie.Title
-                    }, void 0, false, {
-                        fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
-                        children: movie.Description
-                    }, void 0, false, {
-                        fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                        variant: "primary",
-                        onClick: ()=>{
-                            onMovieClick(movie);
-                        },
-                        children: movie.Title
-                    }, void 0, false, {
-                        fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/movie-card/movie-card.jsx",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
-};
-_c = MovieCard;
-MovieCard.propTypes = {
-    movie: (0, _propTypesDefault.default).shape({
-        Title: (0, _propTypesDefault.default).string.isRequired,
-        Description: (0, _propTypesDefault.default).string.isRequired,
-        Genre: (0, _propTypesDefault.default).shape({
-            Name: (0, _propTypesDefault.default).string.isRequired,
-            Description: (0, _propTypesDefault.default).string.isRequired
-        }),
-        Director: (0, _propTypesDefault.default).shape({
-            Name: (0, _propTypesDefault.default).string.isRequired,
-            Bio: (0, _propTypesDefault.default).string.isRequired
-        }),
-        Actors: (0, _propTypesDefault.default).string.isRequired,
-        ImagePath: (0, _propTypesDefault.default).string.isRequired,
-        Year: (0, _propTypesDefault.default).string.isRequired
-    }).isRequired,
-    onBackClick: (0, _propTypesDefault.default).func.isRequired
-};
-var _c;
-$RefreshReg$(_c, "MovieCard");
-
-  $parcel$ReactRefreshHelpers$67b2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","prop-types":"7wKI2","react-bootstrap":"3AD9A"}],"3AD9A":[function(require,module,exports) {
+},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"3AD9A":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>(0, _accordionDefault.default));
@@ -32923,20 +32650,7 @@ CloseButton.displayName = "CloseButton";
 CloseButton.propTypes = propTypes;
 exports.default = CloseButton;
 
-},{"prop-types":"7wKI2","react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"eDg7t":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _jsxRuntime = require("react/jsx-runtime");
-exports.default = (className)=>/*#__PURE__*/ _react.forwardRef((p, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-            ...p,
-            ref: ref,
-            className: (0, _classnamesDefault.default)(p.className, className)
-        }));
-
-},{"react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"lwVpH":[function(require,module,exports) {
+},{"prop-types":"7wKI2","react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"lwVpH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _anchor = require("@restart/ui/Anchor");
@@ -33067,123 +32781,7 @@ const ButtonToolbar = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, ro
 ButtonToolbar.displayName = "ButtonToolbar";
 exports.default = ButtonToolbar;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"lAynp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _createWithBsPrefix = require("./createWithBsPrefix");
-var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
-var _divWithClassName = require("./divWithClassName");
-var _divWithClassNameDefault = parcelHelpers.interopDefault(_divWithClassName);
-var _cardImg = require("./CardImg");
-var _cardImgDefault = parcelHelpers.interopDefault(_cardImg);
-var _cardHeader = require("./CardHeader");
-var _cardHeaderDefault = parcelHelpers.interopDefault(_cardHeader);
-var _jsxRuntime = require("react/jsx-runtime");
-const DivStyledAsH5 = (0, _divWithClassNameDefault.default)("h5");
-const DivStyledAsH6 = (0, _divWithClassNameDefault.default)("h6");
-const CardBody = (0, _createWithBsPrefixDefault.default)("card-body");
-const CardTitle = (0, _createWithBsPrefixDefault.default)("card-title", {
-    Component: DivStyledAsH5
-});
-const CardSubtitle = (0, _createWithBsPrefixDefault.default)("card-subtitle", {
-    Component: DivStyledAsH6
-});
-const CardLink = (0, _createWithBsPrefixDefault.default)("card-link", {
-    Component: "a"
-});
-const CardText = (0, _createWithBsPrefixDefault.default)("card-text", {
-    Component: "p"
-});
-const CardFooter = (0, _createWithBsPrefixDefault.default)("card-footer");
-const CardImgOverlay = (0, _createWithBsPrefixDefault.default)("card-img-overlay");
-const Card = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, bg, text, border, body = false, children, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "div", ...props }, ref)=>{
-    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "card");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ref: ref,
-        ...props,
-        className: (0, _classnamesDefault.default)(className, prefix, bg && `bg-${bg}`, text && `text-${text}`, border && `border-${border}`),
-        children: body ? /*#__PURE__*/ (0, _jsxRuntime.jsx)(CardBody, {
-            children: children
-        }) : children
-    });
-});
-Card.displayName = "Card";
-exports.default = Object.assign(Card, {
-    Img: (0, _cardImgDefault.default),
-    Title: CardTitle,
-    Subtitle: CardSubtitle,
-    Body: CardBody,
-    Link: CardLink,
-    Text: CardText,
-    Header: (0, _cardHeaderDefault.default),
-    Footer: CardFooter,
-    ImgOverlay: CardImgOverlay
-});
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./createWithBsPrefix":"itt7e","./divWithClassName":"eDg7t","./CardImg":"1reTi","./CardHeader":"dXnnx","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"1reTi":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const CardImg = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-({ bsPrefix, className, variant, as: Component = "img", ...props }, ref)=>{
-    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "card-img");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ref: ref,
-        className: (0, _classnamesDefault.default)(variant ? `${prefix}-${variant}` : prefix, className),
-        ...props
-    });
-});
-CardImg.displayName = "CardImg";
-exports.default = CardImg;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"dXnnx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _cardHeaderContext = require("./CardHeaderContext");
-var _cardHeaderContextDefault = parcelHelpers.interopDefault(_cardHeaderContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const CardHeader = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "div", ...props }, ref)=>{
-    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "card-header");
-    const contextValue = (0, _react.useMemo)(()=>({
-            cardHeaderBsPrefix: prefix
-        }), [
-        prefix
-    ]);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _cardHeaderContextDefault.default).Provider, {
-        value: contextValue,
-        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-            ref: ref,
-            ...props,
-            className: (0, _classnamesDefault.default)(className, prefix)
-        })
-    });
-});
-CardHeader.displayName = "CardHeader";
-exports.default = CardHeader;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./CardHeaderContext":"36cNB","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"36cNB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-const context = /*#__PURE__*/ _react.createContext(null);
-context.displayName = "CardHeaderContext";
-exports.default = context;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"2j3Ij":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"2j3Ij":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _createWithBsPrefix = require("./createWithBsPrefix");
@@ -33655,7 +33253,43 @@ as: Component = "div", bsPrefix, className, ...props }, ref)=>{
 CarouselItem.displayName = "CarouselItem";
 exports.default = CarouselItem;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"88m2L":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"fdyAp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "map", ()=>map);
+parcelHelpers.export(exports, "forEach", ()=>forEach);
+parcelHelpers.export(exports, "hasChildOfType", ()=>hasChildOfType);
+var _react = require("react");
+/**
+ * Iterates through children that are typically specified as `props.children`,
+ * but only maps over children that are "valid elements".
+ *
+ * The mapFunction provided index will be normalised to the components mapped,
+ * so an invalid component would not increase the index.
+ *
+ */ function map(children, func) {
+    let index = 0;
+    return _react.Children.map(children, (child)=>/*#__PURE__*/ _react.isValidElement(child) ? func(child, index++) : child);
+}
+/**
+ * Iterates through children that are "valid elements".
+ *
+ * The provided forEachFunc(child, index) will be called for each
+ * leaf child with the index reflecting the position relative to "valid components".
+ */ function forEach(children, func) {
+    let index = 0;
+    _react.Children.forEach(children, (child)=>{
+        if (/*#__PURE__*/ _react.isValidElement(child)) func(child, index++);
+    });
+}
+/**
+ * Finds whether a component's `children` prop includes a React element of the
+ * specified type.
+ */ function hasChildOfType(children, type) {
+    return _react.Children.toArray(children).some((child)=>/*#__PURE__*/ _react.isValidElement(child) && child.type === type);
+}
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"88m2L":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -36431,7 +36065,50 @@ function contains(context, node) {
     if (context.compareDocumentPosition) return context === node || !!(context.compareDocumentPosition(node) & 16);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"8jWN8":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"eUVzU":[function(require,module,exports) {
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */ var __DEV__ = true;
+var warning = function() {};
+if (__DEV__) {
+    var printWarning = function printWarning(format, args) {
+        var len = arguments.length;
+        args = new Array(len > 1 ? len - 1 : 0);
+        for(var key = 1; key < len; key++)args[key - 1] = arguments[key];
+        var argIndex = 0;
+        var message = "Warning: " + format.replace(/%s/g, function() {
+            return args[argIndex++];
+        });
+        if (typeof console !== "undefined") console.error(message);
+        try {
+            // --- Welcome to debugging React ---
+            // This error was thrown as a convenience so that you can use this stack
+            // to find the callsite that caused this warning to fire.
+            throw new Error(message);
+        } catch (x) {}
+    };
+    warning = function(condition, format, args) {
+        var len = arguments.length;
+        args = new Array(len > 2 ? len - 2 : 0);
+        for(var key = 2; key < len; key++)args[key - 2] = arguments[key];
+        if (format === undefined) throw new Error("`warning(condition, format, ...args)` requires a warning message argument");
+        if (!condition) printWarning.apply(null, [
+            format
+        ].concat(args));
+    };
+}
+module.exports = warning;
+
+},{}],"8jWN8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "toModifierMap", ()=>toModifierMap);
@@ -37179,7 +36856,452 @@ DropdownButton.displayName = "DropdownButton";
 DropdownButton.propTypes = propTypes;
 exports.default = DropdownButton;
 
-},{"react":"21dqq","prop-types":"7wKI2","./Dropdown":"88m2L","./DropdownToggle":"gCRNt","./DropdownMenu":"6UpAn","./types":"jwKaQ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"hEdsw":[function(require,module,exports) {
+},{"react":"21dqq","prop-types":"7wKI2","./Dropdown":"88m2L","./DropdownToggle":"gCRNt","./DropdownMenu":"6UpAn","./types":"jwKaQ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"iBZ80":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _formCheck = require("./FormCheck");
+var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
+var _formControl = require("./FormControl");
+var _formControlDefault = parcelHelpers.interopDefault(_formControl);
+var _formFloating = require("./FormFloating");
+var _formFloatingDefault = parcelHelpers.interopDefault(_formFloating);
+var _formGroup = require("./FormGroup");
+var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
+var _formLabel = require("./FormLabel");
+var _formLabelDefault = parcelHelpers.interopDefault(_formLabel);
+var _formRange = require("./FormRange");
+var _formRangeDefault = parcelHelpers.interopDefault(_formRange);
+var _formSelect = require("./FormSelect");
+var _formSelectDefault = parcelHelpers.interopDefault(_formSelect);
+var _formText = require("./FormText");
+var _formTextDefault = parcelHelpers.interopDefault(_formText);
+var _switch = require("./Switch");
+var _switchDefault = parcelHelpers.interopDefault(_switch);
+var _floatingLabel = require("./FloatingLabel");
+var _floatingLabelDefault = parcelHelpers.interopDefault(_floatingLabel);
+var _jsxRuntime = require("react/jsx-runtime");
+const propTypes = {
+    /**
+   * The Form `ref` will be forwarded to the underlying element,
+   * which means, unless it's rendered `as` a composite component,
+   * it will be a DOM node, when resolved.
+   *
+   * @type {ReactRef}
+   * @alias ref
+   */ _ref: (0, _propTypesDefault.default).any,
+    /**
+   * Mark a form as having been validated. Setting it to `true` will
+   * toggle any validation styles on the forms elements.
+   */ validated: (0, _propTypesDefault.default).bool,
+    as: (0, _propTypesDefault.default).elementType
+};
+const Form = /*#__PURE__*/ _react.forwardRef(({ className, validated, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "form", ...props }, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, validated && "was-validated")
+    }));
+Form.displayName = "Form";
+Form.propTypes = propTypes;
+exports.default = Object.assign(Form, {
+    Group: (0, _formGroupDefault.default),
+    Control: (0, _formControlDefault.default),
+    Floating: (0, _formFloatingDefault.default),
+    Check: (0, _formCheckDefault.default),
+    Switch: (0, _switchDefault.default),
+    Label: (0, _formLabelDefault.default),
+    Text: (0, _formTextDefault.default),
+    Range: (0, _formRangeDefault.default),
+    Select: (0, _formSelectDefault.default),
+    FloatingLabel: (0, _floatingLabelDefault.default)
+});
+
+},{"classnames":"jocGM","prop-types":"7wKI2","react":"21dqq","./FormCheck":"idkr0","./FormControl":"iynMc","./FormFloating":"aj346","./FormGroup":"1qBHH","./FormLabel":"66epi","./FormRange":"8zsCO","./FormSelect":"hHWyB","./FormText":"ffeC7","./Switch":"9O81i","./FloatingLabel":"coYzo","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"idkr0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _feedback = require("./Feedback");
+var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
+var _formCheckInput = require("./FormCheckInput");
+var _formCheckInputDefault = parcelHelpers.interopDefault(_formCheckInput);
+var _formCheckLabel = require("./FormCheckLabel");
+var _formCheckLabelDefault = parcelHelpers.interopDefault(_formCheckLabel);
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _elementChildren = require("./ElementChildren");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormCheck = /*#__PURE__*/ _react.forwardRef(({ id, bsPrefix, bsSwitchPrefix, inline = false, reverse = false, disabled = false, isValid = false, isInvalid = false, feedbackTooltip = false, feedback, feedbackType, className, style, title = "", type = "checkbox", label, children, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as = "input", ...props }, ref)=>{
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-check");
+    bsSwitchPrefix = (0, _themeProvider.useBootstrapPrefix)(bsSwitchPrefix, "form-switch");
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    const innerFormContext = (0, _react.useMemo)(()=>({
+            controlId: id || controlId
+        }), [
+        controlId,
+        id
+    ]);
+    const hasLabel = !children && label != null && label !== false || (0, _elementChildren.hasChildOfType)(children, (0, _formCheckLabelDefault.default));
+    const input = /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formCheckInputDefault.default), {
+        ...props,
+        type: type === "switch" ? "checkbox" : type,
+        ref: ref,
+        isValid: isValid,
+        isInvalid: isInvalid,
+        disabled: disabled,
+        as: as
+    });
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formContextDefault.default).Provider, {
+        value: innerFormContext,
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+            style: style,
+            className: (0, _classnamesDefault.default)(className, hasLabel && bsPrefix, inline && `${bsPrefix}-inline`, reverse && `${bsPrefix}-reverse`, type === "switch" && bsSwitchPrefix),
+            children: children || /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _jsxRuntime.Fragment), {
+                children: [
+                    input,
+                    hasLabel && /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formCheckLabelDefault.default), {
+                        title: title,
+                        children: label
+                    }),
+                    feedback && /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _feedbackDefault.default), {
+                        type: feedbackType,
+                        tooltip: feedbackTooltip,
+                        children: feedback
+                    })
+                ]
+            })
+        })
+    });
+});
+FormCheck.displayName = "FormCheck";
+exports.default = Object.assign(FormCheck, {
+    Input: (0, _formCheckInputDefault.default),
+    Label: (0, _formCheckLabelDefault.default)
+});
+
+},{"classnames":"jocGM","react":"21dqq","./Feedback":"aWeg2","./FormCheckInput":"dPzD9","./FormCheckLabel":"fGhS2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","./ElementChildren":"fdyAp","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"aWeg2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _jsxRuntime = require("react/jsx-runtime");
+const propTypes = {
+    /**
+   * Specify whether the feedback is for valid or invalid fields
+   *
+   * @type {('valid'|'invalid')}
+   */ type: (0, _propTypesDefault.default).string,
+    /** Display feedback as a tooltip. */ tooltip: (0, _propTypesDefault.default).bool,
+    as: (0, _propTypesDefault.default).elementType
+};
+const Feedback = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+({ as: Component = "div", className, type = "valid", tooltip = false, ...props }, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, `${type}-${tooltip ? "tooltip" : "feedback"}`)
+    }));
+Feedback.displayName = "Feedback";
+Feedback.propTypes = propTypes;
+exports.default = Feedback;
+
+},{"classnames":"jocGM","react":"21dqq","prop-types":"7wKI2","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"dPzD9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormCheckInput = /*#__PURE__*/ _react.forwardRef(({ id, bsPrefix, className, type = "checkbox", isValid = false, isInvalid = false, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "input", ...props }, ref)=>{
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-check-input");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        ref: ref,
+        type: type,
+        id: id || controlId,
+        className: (0, _classnamesDefault.default)(className, bsPrefix, isValid && "is-valid", isInvalid && "is-invalid")
+    });
+});
+FormCheckInput.displayName = "FormCheckInput";
+exports.default = FormCheckInput;
+
+},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"gjvSt":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+// TODO
+const FormContext = /*#__PURE__*/ _react.createContext({});
+exports.default = FormContext;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"fGhS2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormCheckLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, htmlFor, ...props }, ref)=>{
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-check-label");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
+        ...props,
+        ref: ref,
+        htmlFor: htmlFor || controlId,
+        className: (0, _classnamesDefault.default)(className, bsPrefix)
+    });
+});
+FormCheckLabel.displayName = "FormCheckLabel";
+exports.default = FormCheckLabel;
+
+},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"iynMc":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _warning = require("warning");
+var _warningDefault = parcelHelpers.interopDefault(_warning);
+var _feedback = require("./Feedback");
+var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormControl = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, type, size, htmlSize, id, className, isValid = false, isInvalid = false, plaintext, readOnly, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "input", ...props }, ref)=>{
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-control");
+    let classes;
+    if (plaintext) classes = {
+        [`${bsPrefix}-plaintext`]: true
+    };
+    else classes = {
+        [bsPrefix]: true,
+        [`${bsPrefix}-${size}`]: size
+    };
+    (0, _warningDefault.default)(controlId == null || !id, "`controlId` is ignored on `<FormControl>` when `id` is specified.");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        type: type,
+        size: htmlSize,
+        ref: ref,
+        readOnly: readOnly,
+        id: id || controlId,
+        className: (0, _classnamesDefault.default)(className, classes, isValid && `is-valid`, isInvalid && `is-invalid`, type === "color" && `${bsPrefix}-color`)
+    });
+});
+FormControl.displayName = "FormControl";
+exports.default = Object.assign(FormControl, {
+    Feedback: (0, _feedbackDefault.default)
+});
+
+},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Feedback":"aWeg2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"aj346":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _createWithBsPrefix = require("./createWithBsPrefix");
+var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
+exports.default = (0, _createWithBsPrefixDefault.default)("form-floating");
+
+},{"./createWithBsPrefix":"itt7e","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"1qBHH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const FormGroup = /*#__PURE__*/ _react.forwardRef(({ controlId, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "div", ...props }, ref)=>{
+    const context = (0, _react.useMemo)(()=>({
+            controlId
+        }), [
+        controlId
+    ]);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formContextDefault.default).Provider, {
+        value: context,
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+            ...props,
+            ref: ref
+        })
+    });
+});
+FormGroup.displayName = "FormGroup";
+exports.default = FormGroup;
+
+},{"react":"21dqq","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"66epi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _warning = require("warning");
+var _warningDefault = parcelHelpers.interopDefault(_warning);
+var _col = require("./Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormLabel = /*#__PURE__*/ _react.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = "label", bsPrefix, column = false, visuallyHidden = false, className, htmlFor, ...props }, ref)=>{
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-label");
+    let columnClass = "col-form-label";
+    if (typeof column === "string") columnClass = `${columnClass} ${columnClass}-${column}`;
+    const classes = (0, _classnamesDefault.default)(className, bsPrefix, visuallyHidden && "visually-hidden", column && columnClass);
+    (0, _warningDefault.default)(controlId == null || !htmlFor, "`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.");
+    htmlFor = htmlFor || controlId;
+    if (column) return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _colDefault.default), {
+        ref: ref,
+        as: "label",
+        className: classes,
+        htmlFor: htmlFor,
+        ...props
+    });
+    return(/*#__PURE__*/ // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
+    (0, _jsxRuntime.jsx)(Component, {
+        ref: ref,
+        className: classes,
+        htmlFor: htmlFor,
+        ...props
+    }));
+});
+FormLabel.displayName = "FormLabel";
+exports.default = FormLabel;
+
+},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Col":"2L2I6","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"8zsCO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const FormRange = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, id, ...props }, ref)=>{
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-range");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
+        ...props,
+        type: "range",
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, bsPrefix),
+        id: id || controlId
+    });
+});
+FormRange.displayName = "FormRange";
+exports.default = FormRange;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"hHWyB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const FormSelect = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, size, htmlSize, className, isValid = false, isInvalid = false, id, ...props }, ref)=>{
+    const { controlId } = (0, _react.useContext)((0, _formContextDefault.default));
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-select");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("select", {
+        ...props,
+        size: htmlSize,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, bsPrefix, size && `${bsPrefix}-${size}`, isValid && `is-valid`, isInvalid && `is-invalid`),
+        id: id || controlId
+    });
+});
+FormSelect.displayName = "FormSelect";
+exports.default = FormSelect;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"ffeC7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormText = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+({ bsPrefix, className, as: Component = "small", muted, ...props }, ref)=>{
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-text");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, bsPrefix, muted && "text-muted")
+    });
+});
+FormText.displayName = "FormText";
+exports.default = FormText;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"9O81i":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _formCheck = require("./FormCheck");
+var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
+var _jsxRuntime = require("react/jsx-runtime");
+const Switch = /*#__PURE__*/ _react.forwardRef((props, ref)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _formCheckDefault.default), {
+        ...props,
+        ref: ref,
+        type: "switch"
+    }));
+Switch.displayName = "Switch";
+exports.default = Object.assign(Switch, {
+    Input: (0, _formCheckDefault.default).Input,
+    Label: (0, _formCheckDefault.default).Label
+});
+
+},{"react":"21dqq","./FormCheck":"idkr0","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"coYzo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _formGroup = require("./FormGroup");
+var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FloatingLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, children, controlId, label, ...props }, ref)=>{
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "form-floating");
+    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _formGroupDefault.default), {
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, bsPrefix),
+        controlId: controlId,
+        ...props,
+        children: [
+            children,
+            /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
+                htmlFor: controlId,
+                children: label
+            })
+        ]
+    });
+});
+FloatingLabel.displayName = "FloatingLabel";
+exports.default = FloatingLabel;
+
+},{"classnames":"jocGM","react":"21dqq","./FormGroup":"1qBHH","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"hEdsw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -40264,39 +40386,6 @@ const Ratio = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, children, 
 });
 exports.default = Ratio;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"cMC39":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const Row = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "div", ...props }, ref)=>{
-    const decoratedBsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "row");
-    const breakpoints = (0, _themeProvider.useBootstrapBreakpoints)();
-    const minBreakpoint = (0, _themeProvider.useBootstrapMinBreakpoint)();
-    const sizePrefix = `${decoratedBsPrefix}-cols`;
-    const classes = [];
-    breakpoints.forEach((brkPoint)=>{
-        const propValue = props[brkPoint];
-        delete props[brkPoint];
-        let cols;
-        if (propValue != null && typeof propValue === "object") ({ cols } = propValue);
-        else cols = propValue;
-        const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
-        if (cols != null) classes.push(`${sizePrefix}${infix}-${cols}`);
-    });
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ref: ref,
-        ...props,
-        className: (0, _classnamesDefault.default)(className, decoratedBsPrefix, ...classes)
-    });
-});
-Row.displayName = "Row";
-exports.default = Row;
-
 },{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"2r8jr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -41177,7 +41266,7 @@ exports.default = Object.assign(ToggleButtonGroup, {
     Button: (0, _toggleButtonDefault.default)
 });
 
-},{"react":"21dqq","invariant":"d1QgR","uncontrollable":"b3yWY","./createChainedFunction":"1KNLM","./ElementChildren":"fdyAp","./ButtonGroup":"gXYCe","./ToggleButton":"dCmeV","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"9YtA0":[function(require,module,exports) {
+},{"react":"21dqq","invariant":"d1QgR","uncontrollable":"b3yWY","./createChainedFunction":"1KNLM","./ElementChildren":"fdyAp","./ButtonGroup":"gXYCe","./ToggleButton":"dCmeV","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL"}],"d6HH4":[function() {},{}],"9YtA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9fee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41228,6 +41317,9 @@ const LoginView = ({ onLoggedIn })=>{
                 controlId: "formUsername",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        style: {
+                            fontWeight: "bold"
+                        },
                         children: "Username: "
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
@@ -41235,6 +41327,9 @@ const LoginView = ({ onLoggedIn })=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        style: {
+                            border: "solid 1.5px"
+                        },
                         type: "text",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value),
@@ -41255,13 +41350,19 @@ const LoginView = ({ onLoggedIn })=>{
                 controlId: "formPassword",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        style: {
+                            fontWeight: "bold"
+                        },
                         children: "Password: "
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 52,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        style: {
+                            border: "solid 1.5px"
+                        },
                         type: "password",
                         value: password,
                         onChange: (e)=>setPassword(e.target.value),
@@ -41269,22 +41370,32 @@ const LoginView = ({ onLoggedIn })=>{
                         minLength: "8"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 53,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 51,
+                lineNumber: 52,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/components/login-view/login-view.jsx",
+                lineNumber: 63,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                className: "p-2.75",
+                style: {
+                    fontWeight: "bold",
+                    color: "white"
+                },
                 variant: "primary",
                 type: "submit",
                 children: "Submit"
             }, void 0, false, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 61,
+                lineNumber: 64,
                 columnNumber: 7
             }, undefined)
         ]
@@ -41358,6 +41469,9 @@ const SignupView = ()=>{
                 controlId: "formUsername",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        style: {
+                            fontWeight: "bold"
+                        },
                         children: "Username:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
@@ -41365,6 +41479,9 @@ const SignupView = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        style: {
+                            border: "solid 1.5px"
+                        },
                         type: "text",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value),
@@ -41385,13 +41502,19 @@ const SignupView = ()=>{
                 controlId: "formPassword",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        style: {
+                            fontWeight: "bold"
+                        },
                         children: "Password:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        style: {
+                            border: "solid 1.5px"
+                        },
                         type: "password",
                         value: password,
                         onChange: (e)=>{
@@ -41399,26 +41522,32 @@ const SignupView = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formEmail",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        style: {
+                            fontWeight: "bold"
+                        },
                         children: "Email:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 65,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        style: {
+                            border: "solid 1.5px"
+                        },
                         type: "email",
                         value: email,
                         onChange: (e)=>{
@@ -41426,26 +41555,32 @@ const SignupView = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 66,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 64,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formBirthday",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        style: {
+                            fontWeight: "bold"
+                        },
                         children: "Birthday:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 75,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        style: {
+                            border: "solid 1.5px"
+                        },
                         type: "date",
                         value: birthday,
                         onChange: (e)=>{
@@ -41453,22 +41588,32 @@ const SignupView = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 76,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 74,
+                lineNumber: 77,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/components/signup-view/signup-view.jsx",
+                lineNumber: 88,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                className: "p-2.75",
+                style: {
+                    fontWeight: "bold",
+                    color: "white"
+                },
                 variant: "primary",
                 type: "submit",
                 children: "Submit"
             }, void 0, false, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 84,
+                lineNumber: 89,
                 columnNumber: 7
             }, undefined)
         ]
@@ -41488,6 +41633,6 @@ $RefreshReg$(_c, "SignupView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","react-bootstrap":"3AD9A","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"i5LP7":[function() {},{}]},["cBMi9","hKr4i","d8Dch"], "d8Dch", "parcelRequireb44a")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"wjdJL","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"8PuZK","react-bootstrap":"3AD9A","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"lJZlQ":[function() {},{}]},["cBMi9","hKr4i","d8Dch"], "d8Dch", "parcelRequireb44a")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
+import '../../index.scss';
+
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
   const storedToken = localStorage.getItem('token');
@@ -52,14 +54,17 @@ export const MainView = () => {
   return (
     <Row className="justify-content-md-center">
       {!user ? (
-        <Col md={5}>
+        <Col className="p-5" md={5}>
           <LoginView
             onLoggedIn={(user, token) => {
               setUser(user);
               setToken(token);
             }}
           />
+          <br />
           or
+          <br />
+          <br />
           <SignupView />
         </Col>
       ) : selectedMovie ? (
@@ -74,6 +79,8 @@ export const MainView = () => {
       ) : (
         <>
           <Button
+            className="m-3"
+            style={{ color: 'white', fontWeight: 'bold' }}
             variant="primary"
             onClick={() => {
               setUser(null);
@@ -82,7 +89,7 @@ export const MainView = () => {
             Logout
           </Button>
           {movies.map((movie) => (
-            <Col key={movie._id} md={3}>
+            <Col className="mb-5" key={movie._id} md={3}>
               <MovieCard
                 style={{ border: '1px solid green' }}
                 movie={movie}

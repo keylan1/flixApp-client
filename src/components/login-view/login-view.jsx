@@ -39,8 +39,9 @@ export const LoginView = ({ onLoggedIn }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId="formUsername">
-        <Form.Label>Username: </Form.Label>
+        <Form.Label style={{ fontWeight: 'bold' }}>Username: </Form.Label>
         <Form.Control
+          style={{ border: 'solid 1.5px' }}
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -49,8 +50,9 @@ export const LoginView = ({ onLoggedIn }) => {
         />
       </Form.Group>
       <Form.Group controlId="formPassword">
-        <Form.Label>Password: </Form.Label>
+        <Form.Label style={{ fontWeight: 'bold' }}>Password: </Form.Label>
         <Form.Control
+          style={{ border: 'solid 1.5px' }}
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -58,7 +60,12 @@ export const LoginView = ({ onLoggedIn }) => {
           minLength="8"
         />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <br />
+      <Button
+        className="p-2.75"
+        style={{ fontWeight: 'bold', color: 'white' }}
+        variant="primary"
+        type="submit">
         Submit
       </Button>
     </Form>

@@ -41759,7 +41759,7 @@ const NavigationBar = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                            href: "#about",
+                            href: "#user",
                             children: "User"
                         }, void 0, false, {
                             fileName: "src/components/nav-bar/nav-bar.jsx",

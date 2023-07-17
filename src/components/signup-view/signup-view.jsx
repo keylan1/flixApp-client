@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { FormLabel } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export const SignupView = () => {
   const [username, setUsername] = useState('');
@@ -37,48 +40,59 @@ export const SignupView = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username:
-        <input
+    <Form onSubmit={handleSubmit}>
+      <Form.Group controlId="formUsername">
+        <Form.Label style={{ fontWeight: 'bold' }}>Username:</Form.Label>
+        <Form.Control
+          style={{ border: 'solid 1.5px' }}
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
           minLength="8"
         />
-      </label>
-      <label>
-        Password:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formPassword">
+        <Form.Label style={{ fontWeight: 'bold' }}>Password:</Form.Label>
+        <Form.Control
+          style={{ border: 'solid 1.5px' }}
           type="password"
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-      </label>
-      <label>
-        Email:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formEmail">
+        <Form.Label style={{ fontWeight: 'bold' }}>Email:</Form.Label>
+        <Form.Control
+          style={{ border: 'solid 1.5px' }}
           type="email"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
-      </label>
-      <label>
-        Birthday:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formBirthday">
+        <Form.Label style={{ fontWeight: 'bold' }}>Birthday:</Form.Label>
+        <Form.Control
+          style={{ border: 'solid 1.5px' }}
           type="date"
           value={birthday}
           onChange={(e) => {
             setBirthday(e.target.value);
           }}
         />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+      </Form.Group>
+      <br />
+      <Button
+        className="p-2.75"
+        style={{ fontWeight: 'bold', color: 'white' }}
+        variant="primary"
+        type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 };

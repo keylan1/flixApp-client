@@ -1,0 +1,36 @@
+.card-custom {
+  height: 100%;
+}
+
+/*.card-custom .card-img-top {
+  height: 100%; /* Adjust the desired height */
+  //object-fit: contain; /* Ensures the image fills the card without distortion */
+//}
+
+/*.card-img-top {
+  height: 200px; /* Adjust the height value as needed */
+ // object-fit: contain;
+//}
+
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 150%; /* Adjust the padding value to achieve the desired aspect ratio */
+  overflow: hidden;
+}
+
+.aspect-ratio-container .card-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-custom {
+  width: 100%;
+  height: 100%;
+  /* Add any additional styling you want for the button */
+}

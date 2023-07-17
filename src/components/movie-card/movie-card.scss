@@ -35,7 +35,10 @@
   /* Add any additional styling you want for the button */
 }
 
-Button {
-  color: 'white';
-  font-weight: 'bold';
+.info-button {
+  color: white;
+  font-weight: bold;
+  max-width: 200px;
+  max-height: 50px,
 }
+

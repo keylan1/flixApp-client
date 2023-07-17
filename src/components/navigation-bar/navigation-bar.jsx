@@ -1,11 +1,11 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router';
 
-import '../../index.scss';
+import './navigation-bar.scss';
 
 export const NavigationBar = ({ user, onLoggedOut }) => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="custom-nav" bg="light" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">
           flixApp

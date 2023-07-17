@@ -6,12 +6,11 @@ import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import '../../index.scss';
+import './movie-view.scss';
 
 export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
-  const movie = movies.find((m) => m.id === movieId);
-
+  const movie = movies.find((m) => m._id === movieId);
   return (
     <Col>
       <Card className="justify-content-center">
@@ -20,7 +19,6 @@ export const MovieView = ({ movies }) => {
             crossOrigin="anonymous"
             className="h-50, w-50"
             variant="top"
-            //style={{ width: '400px', height: '500px' }}
             src={movie.ImagePath}
           />
         </div>
@@ -79,21 +77,22 @@ export const MovieView = ({ movies }) => {
   );
 };
 
-MovieView.propTypes = {
-  movie: PropTypes.shape({
-    Title: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired,
-    Genre: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    }).isRequired,
-    Director: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      bio: PropTypes.string.isRequired,
-    }),
-    Actors: PropTypes.string.isRequired,
-    ImagePath: PropTypes.string.isRequired,
-    Year: PropTypes.string.isRequired,
-  }).isRequired,
-  onBackClick: PropTypes.func.isRequired,
-};
+/*MovieView.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      Title: PropTypes.string.isRequired,
+      Description: PropTypes.string.isRequired,
+      Genre: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+      }).isRequired,
+      Director: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        bio: PropTypes.string.isRequired,
+      }),
+      Actors: PropTypes.string.isRequired,
+      ImagePath: PropTypes.string.isRequired,
+      Year: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};*/

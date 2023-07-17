@@ -17,7 +17,6 @@ export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
   const storedToken = localStorage.getItem('token');
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
 
@@ -148,74 +147,3 @@ export const MainView = () => {
     </BrowserRouter>
   );
 };
-/*         {user ? (
-            <Col 
-              <LoginView
-                onLoggedIn={(user, token) => {
-                  setUser(user);
-                  setToken(token);
-                }}
-              />
-              <br />
-              or
-              <br />
-              <br />
-              <SignupView />
-            </Col>
-          ) : selectedMovie ? (
-            <Col md={8}>
-              <MovieView
-                movie={selectedMovie}
-                onBackClick={() => setSelectedMovie(null)}
-              />
-            </Col>
-          ) : movies.length === 0 ? (
-            <div>No movies!</div>
-          ) : (
-            <>
-              <div className="d-flex justify-content-center">
-                <Button
-                  className="m-3"
-                  style={{
-                    color: 'white',
-                    fontWeight: 'bold',
-                    maxWidth: '200px',
-                    maxHeight: '50px',
-                  }}
-                  variant="primary"
-                  size="lg"
-                  onClick={() => {
-                    setUser(null);
-                    setToken(null);
-                  }}>
-                  Logout
-                </Button>
-              </div>
-              {movies.map((movie) => (
-                <Col
-                  className="mb-5"
-                  key={movie._id}
-                  lg={3}
-                  md={4}
-                  sm={6}
-                  xs={12}>
-                  <MovieCard
-                    style={{ border: '1px solid green' }}
-                    movie={movie}
-                    onMovieClick={(newSelectedMovie) => {
-                      setSelectedMovie(newSelectedMovie);
-                    }}
-                  />
-                </Col>
-              ))}
-            </>
-          )}
-        </Routes>
-      </Row>
-    </BrowserRouter>
-  );
-};
-
-MainView.propTypes = {
-  onLogout: PropTypes.func.isRequired,
-};*/

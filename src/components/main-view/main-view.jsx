@@ -82,8 +82,77 @@ export const MainView = () => {
               </>
             }
           />
-          {!user ? (
-            <Col className="p-5" md={5}>
+          <Route
+            path="/login"
+            element={
+              <>
+                {user ? (
+                  <Navigate to="/" />
+                ) : (
+                  <Col className="p-5" md={5}>
+                    <LoginView
+                      onLoggedIn={(user, token) => {
+                        setUser(user);
+                        setToken(token);
+                      }}
+                    />
+                  </Col>
+                )}
+              </>
+            }
+          />
+          <Route
+            path="/movies/:movieId"
+            element={
+              <>
+                {!user ? (
+                  <Navigate to="/login" replace />
+                ) : movies.length === 0 ? (
+                  <Col>No movies!</Col>
+                ) : (
+                  <Col md={8}>
+                    <MovieView movies={movies} />
+                  </Col>
+                )}
+              </>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <>
+                {!user ? (
+                  <Navigate to="/login" replace />
+                ) : movies.length === 0 ? (
+                  <Col>No movies!</Col>
+                ) : (
+                  <>
+                    {movies.map((movie) => (
+                      <Col
+                        className="mb-5"
+                        key={movie._id}
+                        lg={3}
+                        md={4}
+                        sm={6}
+                        xs={12}>
+                        <MovieCard
+                          style={{ border: '1px solid green' }}
+                          movie={movie}
+                        />
+                      </Col>
+                    ))}
+                  </>
+                )}
+              </>
+            }
+          />
+        </Routes>
+      </Row>
+    </BrowserRouter>
+  );
+};
+/*         {user ? (
+            <Col 
               <LoginView
                 onLoggedIn={(user, token) => {
                   setUser(user);
@@ -149,7 +218,7 @@ export const MainView = () => {
     </BrowserRouter>
   );
 };
-
+*/
 MainView.propTypes = {
   onLogout: PropTypes.func.isRequired,
 };

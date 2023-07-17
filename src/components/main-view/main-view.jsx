@@ -3,8 +3,9 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
 import { SignupView } from '../signup-view/signup-view';
-import { NavigationBar } from '../nav-bar/nav-bar';
+import { NavigationBar } from '../navigation-bar/navigation-bar';
 import PropTypes from 'prop-types';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
@@ -55,73 +56,89 @@ export const MainView = () => {
   }, [token]);
 
   return (
-    <>
+    <BrowserRouter>
       <NavigationBar />
       <Row className="justify-content-md-center">
-        {!user ? (
-          <Col className="p-5" md={5}>
-            <LoginView
-              onLoggedIn={(user, token) => {
-                setUser(user);
-                setToken(token);
-              }}
-            />
-            <br />
-            or
-            <br />
-            <br />
-            <SignupView />
-          </Col>
-        ) : selectedMovie ? (
-          <Col md={8}>
-            <MovieView
-              movie={selectedMovie}
-              onBackClick={() => setSelectedMovie(null)}
-            />
-          </Col>
-        ) : movies.length === 0 ? (
-          <div>No movies!</div>
-        ) : (
-          <>
-            <div className="d-flex justify-content-center">
-              <Button
-                className="m-3"
-                style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  maxWidth: '200px',
-                  maxHeight: '50px',
+        <Routes>
+          <Route
+            path="/signup"
+            element={
+              <>
+                {user ? (
+                  <Navigate to="/" />
+                ) : (
+                  <Col md={5}>
+                    <SignupView />
+                  </Col>
+                )}
+              </>
+            }
+          />
+          {!user ? (
+            <Col className="p-5" md={5}>
+              <LoginView
+                onLoggedIn={(user, token) => {
+                  setUser(user);
+                  setToken(token);
                 }}
-                variant="primary"
-                size="lg"
-                onClick={() => {
-                  setUser(null);
-                  setToken(null);
-                }}>
-                Logout
-              </Button>
-            </div>
-            {movies.map((movie) => (
-              <Col
-                className="mb-5"
-                key={movie._id}
-                lg={3}
-                md={4}
-                sm={6}
-                xs={12}>
-                <MovieCard
-                  style={{ border: '1px solid green' }}
-                  movie={movie}
-                  onMovieClick={(newSelectedMovie) => {
-                    setSelectedMovie(newSelectedMovie);
+              />
+              <br />
+              or
+              <br />
+              <br />
+              <SignupView />
+            </Col>
+          ) : selectedMovie ? (
+            <Col md={8}>
+              <MovieView
+                movie={selectedMovie}
+                onBackClick={() => setSelectedMovie(null)}
+              />
+            </Col>
+          ) : movies.length === 0 ? (
+            <div>No movies!</div>
+          ) : (
+            <>
+              <div className="d-flex justify-content-center">
+                <Button
+                  className="m-3"
+                  style={{
+                    color: 'white',
+                    fontWeight: 'bold',
+                    maxWidth: '200px',
+                    maxHeight: '50px',
                   }}
-                />
-              </Col>
-            ))}
-          </>
-        )}
+                  variant="primary"
+                  size="lg"
+                  onClick={() => {
+                    setUser(null);
+                    setToken(null);
+                  }}>
+                  Logout
+                </Button>
+              </div>
+              {movies.map((movie) => (
+                <Col
+                  className="mb-5"
+                  key={movie._id}
+                  lg={3}
+                  md={4}
+                  sm={6}
+                  xs={12}>
+                  <MovieCard
+                    style={{ border: '1px solid green' }}
+                    movie={movie}
+                    onMovieClick={(newSelectedMovie) => {
+                      setSelectedMovie(newSelectedMovie);
+                    }}
+                  />
+                </Col>
+              ))}
+            </>
+          )}
+        </Routes>
       </Row>
-    </>
+    </BrowserRouter>
   );
 };
 

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import './movie-card.scss';
 
@@ -18,14 +19,9 @@ export const MovieCard = ({ movie, onMovieClick }) => {
         <Card.Title>{movie.Title}</Card.Title>
         <Card.Text className="justify-content">{movie.Description}</Card.Text>
         <div className="mt-auto">
-          <Button
-            style={{ color: 'white', fontWeight: 'bold' }}
-            variant="primary"
-            onClick={() => {
-              onMovieClick(movie);
-            }}>
-            More Info
-          </Button>
+          <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
+            <Button variant="primary">More Info</Button>
+          </Link>
         </div>
       </Card.Body>
     </Card>

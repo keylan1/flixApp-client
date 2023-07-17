@@ -135,10 +135,7 @@ export const MainView = () => {
                         md={4}
                         sm={6}
                         xs={12}>
-                        <MovieCard
-                          style={{ border: '1px solid green' }}
-                          movie={movie}
-                        />
+                        <MovieCard movie={movie} />
                       </Col>
                     ))}
                   </>
@@ -218,7 +215,7 @@ export const MainView = () => {
     </BrowserRouter>
   );
 };
-*/
+
 MainView.propTypes = {
   onLogout: PropTypes.func.isRequired,
-};
+};*/

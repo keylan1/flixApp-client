@@ -3,9 +3,15 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+
 import '../../index.scss';
 
-export const MovieView = ({ movie, onBackClick }) => {
+export const MovieView = ({ movies }) => {
+  const { movieId } = useParams();
+  const movie = movies.find((m) => m.id === movieId);
+
   return (
     <Col>
       <Card className="justify-content-center">
@@ -62,18 +68,11 @@ export const MovieView = ({ movie, onBackClick }) => {
           </div>
         </Card.Body>
         <div className="text-center">
-          <Button
-            size="lg"
-            className="p-2.75 mb-3"
-            style={{
-              color: 'white',
-              fontWeight: 'bold',
-              maxWidth: '200px',
-              maxHeight: '50px',
-            }}
-            onClick={onBackClick}>
-            Back
-          </Button>
+          <Link to={`/`}>
+            <Button size="lg" className="p-2.75 mb-3 back-button">
+              Back
+            </Button>
+          </Link>
         </div>
       </Card>
     </Col>

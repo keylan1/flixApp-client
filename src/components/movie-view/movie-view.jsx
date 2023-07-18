@@ -1,10 +1,7 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Button, Card } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import './movie-view.scss';
 
@@ -13,10 +10,10 @@ export const MovieView = ({ movies }) => {
   const movie = movies.find((m) => m._id === movieId);
   return (
     <Card className="justify-content-center card-view">
-      <div className="d-flex justify-content-center align-items-center img-top">
+      <div className="d-flex justify-content-center align-items-center aspect-ratio-container">
         <Card.Img
           crossOrigin="anonymous"
-          className="w-50 h-50 movie-view-image"
+          className="justify-content-center card-img-top"
           variant="top"
           src={movie.ImagePath}
         />
@@ -62,19 +59,19 @@ export const MovieView = ({ movies }) => {
           <span style={{ fontWeight: 'bold' }}>Featured: </span>
           <span>{movie.Featured}</span>
         </div>
-        <div className="text-center">
-          <Link to={`/`}>
-            <Button size="lg" className="p-2.75 mb-3 back-button">
-              Back
-            </Button>
-          </Link>
-        </div>
       </Card.Body>
+      <div className="text-center">
+        <Link to={`/`}>
+          <Button size="lg" className="p-2.75 mb-3 back-button">
+            Back
+          </Button>
+        </Link>
+      </div>
     </Card>
   );
 };
 
-MovieView.propTypes = {
+/*MovieView.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       Title: PropTypes.string.isRequired,
@@ -92,4 +89,4 @@ MovieView.propTypes = {
       Year: PropTypes.string.isRequired,
     })
   ).isRequired,
-};
+};*/

@@ -13,17 +13,18 @@ export const MovieView = ({ movies }) => {
   const movie = movies.find((m) => m._id === movieId);
   return (
     <Col>
-      <Card className="justify-content-center custom-card">
-        <div className="d-flex justify-content-center align-items-center">
+      <Card className="justify-content-center card-view">
+        <div className="d-flex justify-content-center align-items-center img-top">
           <Card.Img
             crossOrigin="anonymous"
-            className="h-50 w-50 view-img"
+            className="w-50 h-50 movie-view-image"
             variant="top"
             src={movie.ImagePath}
           />
         </div>
-        <br />
-        <Card.Title className="align-items ms-3" style={{ fontWeight: 'bold' }}>
+        <Card.Title
+          className="align-items-left ms-3"
+          style={{ fontWeight: 'bold' }}>
           <span>Title: </span>
           <span>{movie.Title}</span>
         </Card.Title>
@@ -75,7 +76,7 @@ export const MovieView = ({ movies }) => {
   );
 };
 
-/*MovieView.propTypes = {
+MovieView.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       Title: PropTypes.string.isRequired,
@@ -93,4 +94,4 @@ export const MovieView = ({ movies }) => {
       Year: PropTypes.string.isRequired,
     })
   ).isRequired,
-};*/
+};

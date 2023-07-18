@@ -1,34 +1,38 @@
+.card-view {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-view-image {
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+.movie-view-title {
+  font-weight: bold;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.movie-view-description {
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
 .back-button {
-    color: white;
-    font-weight: bold;
-    max-width: 200px;
-    max-height: 50px,
+  color: white;
+  font-weight: bold;
+  max-width: 200px;
+  max-height: 50px;
 }
-
-.custom-card {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*.view-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}*/
-
-.view-img {width: 50%;
-height: 50%;
-}
-
-.aspect-ratio-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 150%; /* Adjust the padding value to achieve the desired aspect ratio */
-    overflow: hidden;
-  }

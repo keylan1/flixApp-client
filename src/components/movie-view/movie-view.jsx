@@ -17,7 +17,7 @@ export const MovieView = ({ movies }) => {
         <div className="d-flex justify-content-center align-items-center">
           <Card.Img
             crossOrigin="anonymous"
-            className="h-50 w-50 align-items-center view-img"
+            className="h-50 w-50 view-img"
             variant="top"
             src={movie.ImagePath}
           />

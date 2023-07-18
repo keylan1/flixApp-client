@@ -27567,7 +27567,7 @@ const MovieView = ({ movies })=>{
                     className: "d-flex justify-content-center align-items-center",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
                         crossOrigin: "anonymous",
-                        className: "h-50 w-50 align-items-center view-img",
+                        className: "h-50 w-50 view-img",
                         variant: "top",
                         src: movie.ImagePath
                     }, void 0, false, {

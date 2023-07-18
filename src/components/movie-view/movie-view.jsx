@@ -13,19 +13,17 @@ export const MovieView = ({ movies }) => {
   const movie = movies.find((m) => m._id === movieId);
   return (
     <Col>
-      <Card className="justify-content-center">
+      <Card className="justify-content-center custom-card">
         <div className="d-flex justify-content-center align-items-center">
           <Card.Img
             crossOrigin="anonymous"
-            className="h-50, w-50"
+            className="h-50 w-50 align-items-center view-img"
             variant="top"
             src={movie.ImagePath}
           />
         </div>
         <br />
-        <Card.Title
-          className="align-items-left ms-3"
-          style={{ fontWeight: 'bold' }}>
+        <Card.Title className="align-items ms-3" style={{ fontWeight: 'bold' }}>
           <span>Title: </span>
           <span>{movie.Title}</span>
         </Card.Title>

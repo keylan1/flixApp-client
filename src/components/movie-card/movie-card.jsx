@@ -16,7 +16,7 @@ export const MovieCard = ({ movie }) => {
         />
       </div>
       <Card.Body className="d-flex flex-column align-items-center justify-content-between">
-        <Card.Title>{movie.Title}</Card.Title>
+        <Card.Title className="card-title">{movie.Title}</Card.Title>
         <Card.Text className="justify-content">{movie.Description}</Card.Text>
         <div className="mt-auto">
           <Link to={`/movies/${encodeURIComponent(movie._id)}`}>

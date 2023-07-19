@@ -12,38 +12,49 @@ import Col from 'react-bootstrap/Col';
 
 import './profile-view.scss';
 
-export const ProfileView = ({user, token, movies}) => {
-  const [user, setUser] = useState(""); 
+export const ProfileView = ({ user, token, movies }) => {
+  const [userData, setUserData] = useState(null);
+  const { Username } = useParams();
 
   useEffect(() => {
-
-
-    fetch(`https://flixapptime-44f9e1282e9e.herokuapp.com/users/${Username}`, {
-      headers: { Authorization: `Bearer: ${token}` },
-    })
-      .then((response) => response.json())
-      .then((user) => {
-        const flixUserApi = {
-            _id: user._id,
-            Username: user.Username,
-            Email: user.Email,
-            Birthday: user.Birthday,
-            FavoriteMovies: user.FavoriteMovies
-          };
-          console.log(user);
-        setUser(flixUserApi);
-      });
-  }, []);
+    if (Username) {
+      fetch(
+        `https://flixapptime-44f9e1282e9e.herokuapp.com/users/${Username}`,
+        {
+          headers: { Authorization: `Bearer: ${token}` },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setUserData(data);
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error(`Something's wrong`);
+        });
+    }
+  }, [Username, token]);
 
   return (
     <>
-    <div>
-      <UserInfo user={user.Username} email={user.Email}/>
+      <div>{userData && <UserInfo user={userData} />}</div>
+      <div>
+        {userData && <FavoriteMovies user={userData} movies={movies} />}
       </div>
-   </>
+      <div>
+        <UpdateUser user={userData} token={token} />
+      </div>
+    </>
   );
 };
 
+/*
+_id: user._id,
+Username: user.Username,
+Email: user.Email,
+Birthday: user.Birthday,
+FavoriteMovies: user.FavoriteMovies,
+};
 export const  = ({ users }) => {
   const { username } = useParams();
   const user = users.find((u) => u === username);
@@ -110,4 +121,4 @@ export const  = ({ users }) => {
   );
 };
 
-
+*/

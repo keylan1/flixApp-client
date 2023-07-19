@@ -27555,7 +27555,7 @@ const MovieView = ({ movies })=>{
                 className: "d-flex justify-content-center align-items-center aspect-ratio-container",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
                     crossOrigin: "anonymous",
-                    className: "justify-content-center card-img-top",
+                    className: "justify-content-center centered-image",
                     variant: "top",
                     src: movie.ImagePath
                 }, void 0, false, {

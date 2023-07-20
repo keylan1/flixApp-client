@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import './navigation-bar.scss';
 
@@ -25,8 +25,8 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
             )}
             {user && (
               <>
-                <Nav.Link as={Link} to="/profile">
-                  User Profile
+                <Nav.Link as={Link} to={`/users/${user.Username}`}>
+                  Profile
                 </Nav.Link>
               </>
             )}

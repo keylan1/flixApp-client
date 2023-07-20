@@ -11,6 +11,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import '../../index.scss';
+import { FavoriteMovies } from '../profile-view/favorite-movies';
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -100,6 +101,20 @@ export const MainView = () => {
             }
           />
           <Route
+            path="/users/:Username"
+            element={
+              <>
+                {!user ? (
+                  <Navigate to="/login" replace />
+                ) : (
+                  <>
+                    <ProfileView user={user} token={token} movies={movies} />
+                  </>
+                )}
+              </>
+            }
+          />
+          <Route
             path="/movies/:movieId"
             element={
               <>
@@ -109,7 +124,7 @@ export const MainView = () => {
                   <Col>No movies!</Col>
                 ) : (
                   <Col md={8}>
-                    <MovieView movies={movies} />
+                    <MovieView movies={movies} user={user} token={token} />
                   </Col>
                 )}
               </>
@@ -136,25 +151,6 @@ export const MainView = () => {
                         <MovieCard movie={movie} />
                       </Col>
                     ))}
-                  </>
-                )}
-              </>
-            }
-          />
-          <Route
-            path="/users/:Username"
-            element={
-              <>
-                {!user ? (
-                  <Navigate to="/login" replace />
-                ) : (
-                  <>
-                    <ProfileView
-                      user={user}
-                      token={token}
-                      setUser={setUser}
-                      movies={movies}
-                    />
                   </>
                 )}
               </>

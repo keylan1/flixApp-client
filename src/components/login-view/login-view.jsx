@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
 import './login-view.scss';
 
 export const LoginView = ({ onLoggedIn }) => {
@@ -39,8 +40,8 @@ export const LoginView = ({ onLoggedIn }) => {
   };
 
   return (
-    <div>
-      <Form className="login-form" onSubmit={handleSubmit}>
+    <Container className="d-flex align-items-center justify-content-center vh-100">
+      <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formUsername">
           <Form.Label style={{ fontWeight: 'bold' }}>Username: </Form.Label>
           <Form.Control
@@ -72,7 +73,7 @@ export const LoginView = ({ onLoggedIn }) => {
           Submit
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 };
 

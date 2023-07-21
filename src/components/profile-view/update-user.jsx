@@ -9,12 +9,19 @@ import Col from 'react-bootstrap/Col';
 
 import './profile-view.scss';
 
-export const UpdateUser = ({ user, token }) => {
+export const UpdateUser = ({ user, token, updateUserData }) => {
   const [updating, setUpdating] = useState(false);
   const [newUsername, setNewUsername] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [newEmail, setNewEmail] = useState('');
   const [newBirthday, setNewBirthday] = useState('');
+
+  const setUserData = (data) => {
+    setNewUsername(data.Username);
+    setNewPassword(data.Password);
+    setNewEmail(data.Email);
+    setNewBirthday(data.Birthday);
+  };
 
   const handleUpdate = (event) => {
     event.preventDefault();
@@ -26,25 +33,33 @@ export const UpdateUser = ({ user, token }) => {
       Birthday: newBirthday,
     };
 
-    fetch(`https://flixapptime-44f9e1282e9e.herokuapp.com/users/${Username}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(updateData),
-    })
+    fetch(
+      `https://flixapptime-44f9e1282e9e.herokuapp.com/users/${user.Username}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(updateData),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         // Update the user data and reset the form fields
-        setUserData(data);
-        setNewUsername(data.Username);
+        updateUserData(data);
+        /*setNewUsername(data.Username);
         setNewPassword(data.Password);
         setNewEmail(data.Email);
-        setNewBirthday(data.Birthday);
+        setNewBirthday(data.Birthday);*/
         setUpdating(false);
+        /*alert('Profile updated successfully!');
+        window.location.replace(`/users/${data.Username}`);*/
+        localStorage.clear();
+        window.location.replace('/login');
       })
       .catch((error) => {
+        alert('Failed to update profile. Please try again.');
         console.error(`Something's wrong: ${error}`);
       });
   };

@@ -11,7 +11,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import '../../index.scss';
-import { FavoriteMovies } from '../profile-view/favorite-movies';
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -124,7 +123,12 @@ export const MainView = () => {
                   <Col>No movies!</Col>
                 ) : (
                   <Col md={8}>
-                    <MovieView movies={movies} user={user} token={token} />
+                    <MovieView
+                      movies={movies}
+                      user={user}
+                      token={token}
+                      setUser={setUser}
+                    />
                   </Col>
                 )}
               </>

@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button, Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { UserInfo } from './user-info.jsx';
 import { MovieCard } from '../movie-card/movie-card.jsx';
-import { MovieView } from '../movie-view/movie-view.jsx';
-import { FavoriteMovies } from './favorite-movies.jsx';
 import { UpdateUser } from './update-user.jsx';
 
 import Row from 'react-bootstrap/Row';
@@ -14,7 +11,7 @@ import Col from 'react-bootstrap/Col';
 
 import './profile-view.scss';
 
-export const ProfileView = ({ user, token, movies, setFavorites }) => {
+export const ProfileView = ({ user, token, movies }) => {
   const [userData, setUserData] = useState(user);
   const { Username } = useParams();
   const [loading, setLoading] = useState(true);

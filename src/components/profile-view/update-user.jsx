@@ -1,11 +1,7 @@
 import Form from 'react-bootstrap/Form';
-import { FormLabel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { Container, Button, Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import './profile-view.scss';
 

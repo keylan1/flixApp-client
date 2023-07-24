@@ -61,7 +61,7 @@ export const UpdateUser = ({ user, token, updateUserData }) => {
   };
 
   return (
-    <Container className="d-flex align-items-left justify-content-left vh-100">
+    <Container className="d-flex align-items-left justify-content-left">
       <Form onSubmit={handleUpdate}>
         <Form.Group controlId="formUsername">
           <Form.Label style={{ fontWeight: 'bold' }}>Username: </Form.Label>

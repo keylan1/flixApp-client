@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import './movie-card.scss';
 
-export const MovieCard = ({ movie, onMovieClick }) => {
+export const MovieCard = ({ movie }) => {
   return (
     <Card className="h-100 card-custom">
       <div className="aspect-ratio-container">
@@ -15,17 +16,14 @@ export const MovieCard = ({ movie, onMovieClick }) => {
         />
       </div>
       <Card.Body className="d-flex flex-column align-items-center justify-content-between">
-        <Card.Title>{movie.Title}</Card.Title>
+        <Card.Title className="card-title">{movie.Title}</Card.Title>
         <Card.Text className="justify-content">{movie.Description}</Card.Text>
         <div className="mt-auto">
-          <Button
-            style={{ color: 'white', fontWeight: 'bold' }}
-            variant="primary"
-            onClick={() => {
-              onMovieClick(movie);
-            }}>
-            More Info
-          </Button>
+          <Link to={`/movies/${encodeURIComponent(movie._id)}`}>
+            <Button className="info-button" variant="primary">
+              More Info
+            </Button>
+          </Link>
         </div>
       </Card.Body>
     </Card>
@@ -38,5 +36,4 @@ MovieCard.propTypes = {
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
   }).isRequired,
-  onMovieClick: PropTypes.func.isRequired,
 };

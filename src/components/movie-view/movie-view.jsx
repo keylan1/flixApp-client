@@ -1,24 +1,79 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { useParams } from 'react-router';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Button, Card, Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import '../../index.scss';
 
-export const MovieView = ({ movie, onBackClick }) => {
+import './movie-view.scss';
+
+export const MovieView = ({ movies, user, token, setUser }) => {
+  const { movieId } = useParams();
+  const [favorites, setFavorites] = useState(false);
+
+  useEffect(() => {
+    const isFavorited = user.FavoriteMovies.includes(movie._id);
+    setFavorites(isFavorited);
+  }, []);
+
+  const removeFavorite = () => {
+    fetch(
+      `https://flixapptime-44f9e1282e9e.herokuapp.com/users/${user.Username}/FavoriteMovies/${movie._id}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        setFavorites(false);
+        localStorage.setItem('user', JSON.stringify(data));
+        setUser(data);
+      });
+  };
+
+  const addToFavorite = () => {
+    fetch(
+      `https://flixapptime-44f9e1282e9e.herokuapp.com/users/${user.Username}/FavoriteMovies/${movie._id}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        setFavorites(true);
+        localStorage.setItem('user', JSON.stringify(data));
+        setUser(data);
+      });
+  };
+
+  const movie = movies.find((m) => m._id === movieId);
+
   return (
-    <Col>
-      <Card className="justify-content-center">
-        <div className="d-flex justify-content-center align-items-center">
+    <Container className="movie-containers">
+      <Card className="justify-content-center card-view">
+        <div className="d-flex justify-content-center align-items-center aspect-ratio-container">
           <Card.Img
             crossOrigin="anonymous"
-            className="h-50, w-50"
+            className="justify-content-center centered-image"
             variant="top"
-            //style={{ width: '400px', height: '500px' }}
             src={movie.ImagePath}
           />
         </div>
-        <br />
         <Card.Title
           className="align-items-left ms-3"
           style={{ fontWeight: 'bold' }}>
@@ -60,41 +115,50 @@ export const MovieView = ({ movie, onBackClick }) => {
             <span style={{ fontWeight: 'bold' }}>Featured: </span>
             <span>{movie.Featured}</span>
           </div>
+          <div className="text-center">
+            {favorites ? (
+              <Button
+                style={{ fontweight: 'bold' }}
+                size="lg"
+                className="p-2.75 mb-3"
+                onClick={removeFavorite}>
+                Remove from favorites
+              </Button>
+            ) : (
+              <Button size="lg" className="p-2.75 mb-3" onClick={addToFavorite}>
+                Add to Favorites
+              </Button>
+            )}
+          </div>
         </Card.Body>
         <div className="text-center">
-          <Button
-            size="lg"
-            className="p-2.75 mb-3"
-            style={{
-              color: 'white',
-              fontWeight: 'bold',
-              maxWidth: '200px',
-              maxHeight: '50px',
-            }}
-            onClick={onBackClick}>
-            Back
-          </Button>
+          <Link to={`/`}>
+            <Button size="lg" className="p-2.75 mb-3 back-button">
+              Back
+            </Button>
+          </Link>
         </div>
       </Card>
-    </Col>
+    </Container>
   );
 };
 
 MovieView.propTypes = {
-  movie: PropTypes.shape({
-    Title: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired,
-    Genre: PropTypes.shape({
-      Name: PropTypes.string.isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      Title: PropTypes.string.isRequired,
       Description: PropTypes.string.isRequired,
-    }),
-    Director: PropTypes.shape({
-      Name: PropTypes.string.isRequired,
-      Bio: PropTypes.string.isRequired,
-    }),
-    Actors: PropTypes.string.isRequired,
-    ImagePath: PropTypes.string.isRequired,
-    Year: PropTypes.string.isRequired,
-  }).isRequired,
-  onBackClick: PropTypes.func.isRequired,
+      Genre: PropTypes.shape({
+        Name: PropTypes.string.isRequired,
+        Description: PropTypes.string.isRequired,
+      }).isRequired,
+      Director: PropTypes.shape({
+        Name: PropTypes.string.isRequired,
+        Bio: PropTypes.string.isRequired,
+      }),
+      Actors: PropTypes.string.isRequired,
+      ImagePath: PropTypes.string.isRequired,
+      Year: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };

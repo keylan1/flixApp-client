@@ -3,20 +3,21 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
 import { SignupView } from '../signup-view/signup-view';
-import { NavigationBar } from '../nav-bar/nav-bar';
-import PropTypes from 'prop-types';
+import { NavigationBar } from '../navigation-bar/navigation-bar';
+import { ProfileView } from '../profile-view/profile-view';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 import '../../index.scss';
+import './main-view.scss';
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
   const storedToken = localStorage.getItem('token');
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
 
@@ -31,7 +32,6 @@ export const MainView = () => {
       .then((response) => response.json())
       .then((data) => {
         const flixApi = data.map((movie) => {
-          console.log(data);
           return {
             _id: movie._id,
             Title: movie.Title,
@@ -55,76 +55,118 @@ export const MainView = () => {
   }, [token]);
 
   return (
-    <>
-      <NavigationBar />
-      <Row className="justify-content-md-center">
-        {!user ? (
-          <Col className="p-5" md={5}>
-            <LoginView
-              onLoggedIn={(user, token) => {
-                setUser(user);
-                setToken(token);
-              }}
+    <BrowserRouter>
+      <NavigationBar
+        user={user}
+        token={token}
+        onLoggedOut={() => {
+          setUser(null);
+          setToken(null);
+          localStorage.clear();
+        }}
+      />
+      <Container className="main-view">
+        <Row className="justify-content-md-center">
+          <Routes>
+            <Route
+              path="/signup"
+              element={
+                <>
+                  {user ? (
+                    <Navigate to="/" />
+                  ) : (
+                    <Col md={5}>
+                      <SignupView />
+                    </Col>
+                  )}
+                </>
+              }
             />
-            <br />
-            or
-            <br />
-            <br />
-            <SignupView />
-          </Col>
-        ) : selectedMovie ? (
-          <Col md={8}>
-            <MovieView
-              movie={selectedMovie}
-              onBackClick={() => setSelectedMovie(null)}
+            <Route
+              path="/login"
+              element={
+                <>
+                  {user ? (
+                    <Navigate to="/" />
+                  ) : (
+                    <Col className="p-5" md={5}>
+                      <LoginView
+                        onLoggedIn={(user, token) => {
+                          setUser(user);
+                          setToken(token);
+                        }}
+                      />
+                    </Col>
+                  )}
+                </>
+              }
             />
-          </Col>
-        ) : movies.length === 0 ? (
-          <div>No movies!</div>
-        ) : (
-          <>
-            <div className="d-flex justify-content-center">
-              <Button
-                className="m-3"
-                style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  maxWidth: '200px',
-                  maxHeight: '50px',
-                }}
-                variant="primary"
-                size="lg"
-                onClick={() => {
-                  setUser(null);
-                  setToken(null);
-                }}>
-                Logout
-              </Button>
-            </div>
-            {movies.map((movie) => (
-              <Col
-                className="mb-5"
-                key={movie._id}
-                lg={3}
-                md={4}
-                sm={6}
-                xs={12}>
-                <MovieCard
-                  style={{ border: '1px solid green' }}
-                  movie={movie}
-                  onMovieClick={(newSelectedMovie) => {
-                    setSelectedMovie(newSelectedMovie);
-                  }}
-                />
-              </Col>
-            ))}
-          </>
-        )}
-      </Row>
-    </>
+            <Route
+              path="/users/:Username"
+              element={
+                <>
+                  {!user ? (
+                    <Navigate to="/login" replace />
+                  ) : (
+                    <Col md={10}>
+                      <ProfileView user={user} token={token} movies={movies} />
+                    </Col>
+                  )}
+                </>
+              }
+            />
+            <Route
+              path="/movies/:movieId"
+              element={
+                <>
+                  {!user ? (
+                    <Navigate to="/login" replace />
+                  ) : movies.length === 0 ? (
+                    <Col>No movies!</Col>
+                  ) : (
+                    <Row className="d-flex justify-content-center">
+                      <Col md={5}>
+                        <MovieView
+                          movies={movies}
+                          user={user}
+                          token={token}
+                          setUser={setUser}
+                        />
+                      </Col>
+                    </Row>
+                  )}
+                </>
+              }
+            />
+            <Route
+              path="/"
+              element={
+                <>
+                  {!user ? (
+                    <Navigate to="/login" replace />
+                  ) : movies.length === 0 ? (
+                    <Col>No movies!</Col>
+                  ) : (
+                    <>
+                      {movies.map((movie) => (
+                        <Col
+                          className="mb-5"
+                          key={movie._id}
+                          lg={3}
+                          md={4}
+                          sm={6}
+                          xs={12}>
+                          <MovieCard movie={movie} />
+                        </Col>
+                      ))}
+                    </>
+                  )}
+                </>
+              }
+            />
+          </Routes>
+        </Row>
+      </Container>
+    </BrowserRouter>
   );
-};
-
-MainView.propTypes = {
-  onLogout: PropTypes.func.isRequired,
 };

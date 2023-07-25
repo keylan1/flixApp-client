@@ -87,11 +87,13 @@ export const ProfileView = ({ user, token, movies }) => {
           {userData && (
             <>
               <Container className="user-info">
-                <UserInfo
-                  name={userData.Username}
-                  email={userData.Email}
-                  birthday={new Date(userData.Birthday).toLocaleDateString()}
-                />
+                <Col>
+                  <UserInfo
+                    name={userData.Username}
+                    email={userData.Email}
+                    birthday={new Date(userData.Birthday).toLocaleDateString()}
+                  />
+                </Col>
               </Container>
               <Container className="fav-movies">
                 <FavMovies favoriteMovies={favoriteMovies} />

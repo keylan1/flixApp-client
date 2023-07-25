@@ -32,7 +32,6 @@ export const MainView = () => {
       .then((response) => response.json())
       .then((data) => {
         const flixApi = data.map((movie) => {
-          console.log(data);
           return {
             _id: movie._id,
             Title: movie.Title,
@@ -109,9 +108,9 @@ export const MainView = () => {
                   {!user ? (
                     <Navigate to="/login" replace />
                   ) : (
-                    <>
+                    <Col md={10}>
                       <ProfileView user={user} token={token} movies={movies} />
-                    </>
+                    </Col>
                   )}
                 </>
               }

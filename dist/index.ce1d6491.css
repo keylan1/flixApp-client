@@ -13286,8 +13286,23 @@ textarea.form-control-lg {
   margin-right: 5px;
 }
 
-.user-info, .update-user {
+.user-info {
+  margin-bottom: 25px;
+}
+
+.update-user {
   margin-bottom: 10px;
+}
+
+.form-user {
+  border: 1.5px solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button {
+  justify-content: center;
+  display: flex;
 }
 
 h1 {

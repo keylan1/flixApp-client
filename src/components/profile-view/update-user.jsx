@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import './profile-view.scss';
+import './update-user.scss';
 
 export const UpdateUser = ({ user, token, updateUserData }) => {
   const [updating, setUpdating] = useState(false);
@@ -61,8 +62,8 @@ export const UpdateUser = ({ user, token, updateUserData }) => {
   };
 
   return (
-    <Container className="d-flex align-items-left justify-content-left">
-      <Form onSubmit={handleUpdate}>
+    <Container className="d-flex align-items-center justify-content-center">
+      <Form className="form-user" onSubmit={handleUpdate}>
         <Form.Group controlId="formUsername">
           <Form.Label style={{ fontWeight: 'bold' }}>Username: </Form.Label>
           <Form.Control
@@ -108,13 +109,15 @@ export const UpdateUser = ({ user, token, updateUserData }) => {
           />
         </Form.Group>
         <br />
-        <Button
-          className="p-2.75"
-          style={{ fontWeight: 'bold', color: 'white' }}
-          variant="primary"
-          type="submit">
-          Update profile
-        </Button>
+        <div className="button">
+          <Button
+            className="p-2.75"
+            style={{ fontWeight: 'bold', color: 'white' }}
+            variant="primary"
+            type="submit">
+            Update profile
+          </Button>
+        </div>
       </Form>
     </Container>
   );

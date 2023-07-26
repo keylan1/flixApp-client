@@ -27356,8 +27356,10 @@ const MainView = ()=>{
                                                 children: "This list is empty!"
                                             }, void 0, false, void 0, void 0) : movies.filter((movie)=>movie.Title.toLowerCase().includes(filter.toLowerCase())).map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     className: "mb-5",
+                                                    lg: 3,
                                                     md: 4,
-                                                    lg: 4,
+                                                    sm: 6,
+                                                    xs: 12,
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                                                         movie: movie
                                                     }, void 0, false, void 0, void 0)

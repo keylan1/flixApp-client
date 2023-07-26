@@ -3,4 +3,5 @@ node_modules
 .parcel-cache
 .DS_Store
 src/components/profile-view/test.jsx
+src/components/search-bar
 

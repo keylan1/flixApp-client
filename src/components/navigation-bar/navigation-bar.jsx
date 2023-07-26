@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { SearchBar } from '../search-bar/search-bar';
+//import { SearchBar } from '../search-bar/search-bar';
 
 import './navigation-bar.scss';
 

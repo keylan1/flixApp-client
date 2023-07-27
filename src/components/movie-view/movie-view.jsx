@@ -125,7 +125,11 @@ export const MovieView = ({ movies, user, token, setUser }) => {
                 Remove from favorites
               </Button>
             ) : (
-              <Button size="lg" className="p-2.75 mb-3" onClick={addToFavorite}>
+              <Button
+                style={{ fontWeight: 'bold', color: 'white' }}
+                size="lg"
+                className="p-2.75 mb-3"
+                onClick={addToFavorite}>
                 Add to Favorites
               </Button>
             )}
@@ -133,7 +137,10 @@ export const MovieView = ({ movies, user, token, setUser }) => {
         </Card.Body>
         <div className="text-center">
           <Link to={`/`}>
-            <Button size="lg" className="p-2.75 mb-3 back-button">
+            <Button
+              size="lg"
+              className="p-2.75 mb-3 back-button"
+              style={{ fontWeight: 'bold', color: 'white' }}>
               Back
             </Button>
           </Link>

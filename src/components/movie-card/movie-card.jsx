@@ -20,7 +20,10 @@ export const MovieCard = ({ movie }) => {
         <Card.Text className="justify-content">{movie.Description}</Card.Text>
         <div className="mt-auto">
           <Link to={`/movies/${encodeURIComponent(movie._id)}`}>
-            <Button className="info-button" variant="primary">
+            <Button
+              style={{ fontWeight: 'bold', color: 'white' }}
+              className="info-button"
+              variant="primary">
               More Info
             </Button>
           </Link>

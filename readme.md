@@ -26,13 +26,17 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 
 ## Screenshots
 
-| Web View                                 | Mobile View                                                                               |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![Web View](src/assets/FlixApp-home.png) | ![Mobile View 1](src/assets/phonemovie.PNG) ![Mobile View 2](src/assets/phoneprofile.PNG) |
+#### Web View
 
-## Live Demo
+| Home                                            |
+| ----------------------------------------------- |
+| ![Home screenshot](src/assets/FlixApp-home.png) |
 
-You can access the live demo of FlixApp Client at: [https://mflixapp.netlify.app/](https://mflixapp.netlify.app/)
+#### Mobile View
+
+| Search                                      | Profile                                        |
+| ------------------------------------------- | ---------------------------------------------- |
+| ![Mobile search](src/assets/phonemovie.PNG) | ![Mobile profile](src/assets/phoneprofile.PNG) |
 
 ## Technologies Used
 

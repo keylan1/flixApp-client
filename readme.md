@@ -34,9 +34,9 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 
 #### Mobile View
 
-| Search                                      | Profile |
-| ------------------------------------------- | ------- |
-| ![Mobile search](src/assets/phonemovie.PNG) | !       |
+| Search                                      | Profile                                        |
+| ------------------------------------------- | ---------------------------------------------- | --- |
+| ![Mobile search](src/assets/phonemovie.PNG) | ![Mobile profile](src/assets/phoneprofile.PNG) |     |
 
 ## Technologies Used
 

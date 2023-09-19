@@ -77,7 +77,6 @@ export const MovieView = ({ movies, user, token, setUser }) => {
         <Card.Title
           className="align-items-left ms-3"
           style={{ fontWeight: 'bold' }}>
-          <span>Title: </span>
           <span>{movie.Title}</span>
         </Card.Title>
         <Card.Body className="d-flex flex-column align-items-left justify-content-between">

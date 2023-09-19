@@ -18,18 +18,17 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 
 - Browse a collection of movies with detailed information
 - View movie details including title, description, genre, director, actors, and release year
-- Rate and review movies
 - Add movies to your list of favorites
 - User authentication and profile management
 - Responsive design for optimal viewing on different devices
 
 ## Screenshots
 
-_Add some screenshots of your application here to showcase its features._
+![Home screenshot](src/assets/FlixApp-home.png)
 
 ## Live Demo
 
-You can access the live demo of FlixApp Client at: [https://mymflixapp.netlify.app/](https://mymflixapp.netlify.app/)
+You can access the live demo of FlixApp Client at: [https://mflixapp.netlify.app/](https://mflixapp.netlify.app/)
 
 ## Getting Started
 

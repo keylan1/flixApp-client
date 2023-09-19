@@ -33,7 +33,7 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 
 ## Live demo
 
-Link to app: mflixapp.netlify.app/
+Link to app: [mflixapp.netlify.app/](https://mflixapp.netlify.app/login)
 
 ## Technologies Used
 

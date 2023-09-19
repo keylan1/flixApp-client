@@ -71,6 +71,7 @@ export const MovieView = ({ movies, user, token, setUser }) => {
             crossOrigin="anonymous"
             className="justify-content-center centered-image"
             variant="top"
+            style={{ position: 'fixed' }}
             src={movie.ImagePath}
           />
         </div>

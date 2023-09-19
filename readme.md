@@ -1,4 +1,6 @@
-# FlixApp Client
+# mFlixApp (Client)
+
+## Project Description
 
 FlixApp is a movie review web application that allows users to browse, rate, and review their favorite movies. This repository contains the frontend client for FlixApp, built using React and React Bootstrap.
 
@@ -7,12 +9,12 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Live Demo](#live-demo)
+- [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -24,11 +26,18 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 
 ## Screenshots
 
-![Home screenshot](src/assets/FlixApp-home.png)
+| Web View                                 | Mobile View                                                                               |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![Web View](src/assets/FlixApp-home.png) | ![Mobile View 1](src/assets/phonemovie.PNG) ![Mobile View 2](src/assets/phoneprofile.PNG) |
 
 ## Live Demo
 
 You can access the live demo of FlixApp Client at: [https://mflixapp.netlify.app/](https://mflixapp.netlify.app/)
+
+## Technologies Used
+
+- React
+- React Bootstrap
 
 ## Getting Started
 
@@ -67,39 +76,3 @@ npm start
 ```
 
 2. Open your web browser and navigate to `http://localhost:3000` to access the FlixApp client.
-
-## Contributing
-
-We welcome contributions from the community! To contribute to the FlixApp Client, follow these steps:
-
-1. Fork the repository.
-
-2. Create a new branch with a descriptive name for your feature or bug fix:
-
-```
-git checkout -b feature/your-feature-name
-```
-
-3. Commit your changes:
-
-```
-git commit -m "Add your commit message here"
-```
-
-4. Push your changes to your forked repository:
-
-```
-git push origin feature/your-feature-name
-```
-
-5. Open a pull request on the original repository. Provide a clear and descriptive title and description for your pull request.
-
-6. Wait for the maintainers to review and merge your pull request. Thank you for your contribution!
-
-## License
-
-The FlixApp Client is open-source software licensed under the [MIT License](LICENSE).
-
----
-
-Replace the placeholders such as `<link_to_your_logo.png>` with the actual path to your project logo and update the sections as needed to reflect your project's features, usage instructions, and other details. Make sure to include the live demo link to your hosted application, which is available on Netlify.

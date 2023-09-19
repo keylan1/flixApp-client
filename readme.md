@@ -31,6 +31,10 @@ FlixApp is a movie review web application that allows users to browse, rate, and
 | ![Web View](src/assets/FlixApp-home.png) | ![Mobile search](src/assets/phonemovie.PNG)    |
 |                                          | ![Mobile profile](src/assets/phoneprofile.PNG) |
 
+## Live demo
+
+Link to app: mflixapp.netlify.app/
+
 ## Technologies Used
 
 - React

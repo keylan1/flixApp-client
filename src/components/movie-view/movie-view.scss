@@ -45,8 +45,9 @@
   font-weight: bold;
 }
 
-/*@media screen and (max-width: 414px) {
+@media screen and (max-width: 414px) {
   .centered-image {
-    position: relative;
+    max-width: 259px;
+    max-height: 385px;
   }
-}*/
+}
